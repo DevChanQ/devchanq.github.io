@@ -78,16 +78,30 @@
       width: auto !important;
     }
     </style>
+    <link rel="stylesheet" href="/static/owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/owlcarousel/dist/assets/owl.theme.default.min.css">
   </head>
   <body>
     <div class="container">
       <div class="upper">
-        <img src="/static/site/logo.svg" width='20%' />
+        <div style="text-align: center;">
+          <img src="/static/site/logo.svg" width='20%' style="display: block;margin:0 auto 10px;" />
+          <h1>安装指引</h1>
+        </div>
       </div>
-      <div class="lower center">
-        <div class="button-container">
-          <a href="/ios" class="button" ><img src="/static/site/apple.svg" />苹果安装</a>
-          <a id="android" class="button" ><img src="/static/site/android.svg" />安卓安装</a>
+      <div class="lower">
+        <div class="inner-container" style="padding: 20px 0;">
+          <div class="owl-carousel owl-theme">
+            <div class="img-container">
+              <img src="/static/site/ios_one.jpg" />
+            </div>
+            <div class="img-container">
+              <img src="/static/site/ios_two.jpg" />
+            </div>
+            <div class="button-container" style="display: flex;justify-content: center;align-items: center;height: 100%;">
+              <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/DevChanQ/PirateRadioRelease/master/manifest.plist" class="button" ><img src="/static/site/apple.svg" />苹果安装</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -95,13 +109,13 @@
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
       crossorigin="anonymous"></script>
+    <script src="/static/owlcarousel/dist/owl.carousel.min.js"></script>
     <script type="text/javascript">
-    $.get("https://api.github.com/repos/DevChanQ/PirateRadioRelease/releases/latest", function(data) {
-      for (let asset of data.assets) {
-        let a = asset.name.split('.')
-        if (a[a.length - 1] === 'apk') $('#android').attr("href", asset.browser_download_url)
-      }
-    });
+      $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+          items: 1
+        });
+      });
     </script>
   </body>
 </html>

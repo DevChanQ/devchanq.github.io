@@ -39,6 +39,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      flex-flow: column;
     }
     .container .lower .inner-container{
       height: 100%;
@@ -86,9 +88,11 @@
       </div>
       <div class="lower center">
         <div class="button-container">
-          <a href="https://app.sontun.com/?id=tSdp" class="button" ><img src="/static/site/apple.svg" />苹果安装</a>
+          <a href="https://app.mxzbqc.cn/?id=tSdp" class="button" ><img src="/static/site/apple.svg" />苹果安装</a>
           <a id="android" class="button" ><img src="/static/site/android.svg" />安卓安装</a>
         </div>
+
+        <p id="latest-version" style="text-align: center; margin-top: 40px;"></p>
       </div>
     </div>
     <script
@@ -101,6 +105,9 @@
         let a = asset.name.split('.')
         if (a[a.length - 1] === 'apk') $('#android').attr("href", asset.browser_download_url)
       }
+
+      let el = document.getElementById('latest-version')
+      el.innerHTML = '最新版本： ' + data.tag_name
     });
     </script>
   </body>

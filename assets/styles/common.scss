@@ -1,0 +1,457 @@
+@import './_global.scss';
+@import "./_bootstrap.scss";
+@import 'bootstrap/scss/bootstrap-grid';
+@import 'bootstrap/scss/bootstrap-reboot';
+
+@import './document-page.scss';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.avatar {
+  display: block;
+  position: relative;
+
+  padding-top: 100%;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border-radius: 50%;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    right: 0;
+    top: -10px;
+    bottom: 0;
+
+    background-image: url("../doodles/image_frame.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: -40%;
+    top: -10px;
+    width: 100px;
+    height: 100px;
+
+    background-image: url("../doodles/arrow_pointing.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(316deg, #e7b605 5%, #fdde10 50%);
+  // background: linear-gradient(316deg, #131313 5%, #222 50%);
+  // background-color: $primary;
+}
+
+a, p, h1, h2, h3, h4, h5 {
+  color: $contrast;
+}
+
+a {
+  text-underline-offset: 4px;
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.cursor {
+  animation: blink 1s infinite;
+
+  margin-left: 5px;
+}
+
+@-webkit-keyframes blink {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes blink {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes blink {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes blink {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ----------------- Layers ----------------- */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.8);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#devjeff__back_layer {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+#devjeff__default-layout {
+  &.terminal-shown {
+    // #devjeff__back_layer {
+    //   opacity: 0.1;
+    //   transform: scale(0.99);
+    // }
+
+    #devjeff__terminal_layer {
+      opacity: 1;
+      pointer-events: auto;
+
+      #devjeff__terminal {
+        transform: translate(-50%, 0px);
+      }
+    }
+  }
+
+  &.sidenav-shown {
+    #devjeff__back_layer {
+      opacity: 0.1;
+
+      > * {
+        transform: translateX(20px);
+      }
+    }
+  }
+}
+
+/* ----------------- Page Title -------------------- */
+
+.title {
+  margin-bottom: 50px;
+  color: $contrast;
+  //padding: 16px 16px;
+  //font-style: italic;
+  font-weight: bold;
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+
+  position: relative;
+  z-index: 0;
+
+  .highlight {
+    color: $secondary;
+  }
+}
+
+.title:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  background-image: url("../doodles/arrow_right.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.title:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin: 5px 0 0;
+  margin-left: 5px;
+  background-image: url("../doodles/underline.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/* ----------------- Text Transition -------------------- */
+
+.text-transition-container {
+  overflow: hidden;
+}
+
+.text-transition-container > * {
+  transform: translateY(70px);
+  opacity: 0;
+}
+
+.text-transition-container.animated > * {
+  transform: translateY(0px);
+  opacity: 1;
+
+  transition: opacity .2s, transform .8s;
+  transition-timing-function: cubic-bezier(.65,.05,.36,1);
+}
+
+.text-transition-container.delay > * {
+  transition-delay: .2s;
+}
+
+.text-transition-container.delay-more > * {
+  transition-delay: .6s;
+}
+
+/* ----------------- Code Snippet -------------------- */
+
+.code-snippet {
+  text-align: left;
+  position: relative;
+  border-radius: 6px;
+  margin: 0 auto;
+  // min-height: 200px;
+
+  //box-shadow: 0 1.5em 2em 0 rgba(0,0,0,0.3);
+
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+
+  // color: #1a1a1a;
+}
+.code-snippet #code {
+  white-space: pre;
+  // color: #1a1a1a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.code-snippet code {
+  // color: #1a1a1a !important;
+  display: block;
+  overflow-x: hidden;
+}
+.code-snippet pre {
+  color: #ff3f3f;
+}
+.code-snippet input {
+  flex: 1;
+  padding: 2px 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+}
+.code-snippet .function {
+  color: #ff8400;
+}
+
+/* ----------------- Seperator -------------------- */
+
+.seperator {
+  color: $secondary;
+  margin: 50px auto 25px;
+  display: flex;
+  font-size: 20px;
+  font-family:  SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+.seperator .left-comment, .seperator .right-comment {
+  flex: 1;
+  position: relative;
+}
+.seperator .right-comment {
+  text-align: right;
+}
+.seperator .left-comment:before, .seperator .right-comment:before {
+  content: '';
+  position: absolute;
+  border-bottom: 2px dashed $secondary;
+  top: 50%;
+}
+.seperator .left-comment:before {
+  left: 35px;
+  right: 10px;
+}
+.seperator .right-comment:before {
+  right: 35px;
+  left: 10px;
+}
+.image {
+  height: 200px;
+  background: white;
+  box-shadow: 0px 3px 13px rgba(0,0,0,.1);
+  margin-bottom: 20px;
+}
+
+/* ----------------- New Issues -------------------- */
+
+.commit {
+
+  padding-left: 60px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+.commit .profile-pic {
+  border-radius: 3px;
+  float: left;
+  margin-left: -60px;
+  height: 44px;
+  width: 44px;
+  background: white;
+}
+.commit .comment {
+  border: 1px solid #060606;
+  background: #000000; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #000000 0%, #383838 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #000000 0%,#383838 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #000000 0%,#383838 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#383838',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  border-radius: 3px;
+  position: relative;
+}
+.commit .comment:before {
+  border-color: transparent;
+  border-right-color: #262626;
+  border-width: 8px;
+  border-style: solid solid outset;
+  content: " ";
+  display: block;
+  height: 0;
+  left: -16px;
+  pointer-events: none;
+  position: absolute;
+  right: 100%;
+  top: 11px;
+  width: 0;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  background-color: #383838;
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  border: 1px solid #101010;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(27,31,35,.075);
+  color: #24292e;
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 34px;
+  outline: none;
+  padding: 6px 8px;
+  vertical-align: middle;
+}
+
+.commit textarea  {
+  display: block;
+  max-height: 500px;
+  min-height: 100px;
+  padding: 8px;
+  resize: vertical;
+  width: 100%;
+}
+.commit .content {
+  border-top: 1px solid #4a4a4a;
+  border-bottom: 1px solid #4a4a4a;
+}
+.commit  button {
+  background-color: #28a745;
+  background-position: -1px -1px;
+  background-repeat: repeat-x;
+  background-size: 110% 110%;
+  border: 1px solid rgba(27,31,35,.2);
+  background-image: linear-gradient(-180deg,#34d058,#28a745 90%);
+  color: #fff;
+  border-radius: .25em;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 12px;
+}
+
+/* ----------------- Hamburger -------------------- */
+
+.hamburger {
+  pointer-events: auto;
+  margin-right: 10px;
+}
+
+.hamburger-box {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 20px;
+  height: 2px;
+  background-color: #222;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+  width: 15px;
+}
+
+.hamburger-inner::before {
+  top: -6px;
+}
+
+.hamburger-inner::after {
+  bottom: -6px;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+/* ------------------ Button -------------------- */
+
+.devjeff__button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+
+  color: black !important;
+  background: $secondary;
+
+  transition: all .1s;
+
+  &:hover {
+    transform: translateY(2px);
+  }
+}
+
+@media (max-width: 575px) {
+  nav h1 {
+    font-size: 30px;
+  }
+  .code-snippet {
+    max-width: 100%;
+    width: 100%;
+  }
+}

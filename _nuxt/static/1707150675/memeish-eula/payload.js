@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/memeish-eula", {data:[{}],fetch:{},mutations:void 0});

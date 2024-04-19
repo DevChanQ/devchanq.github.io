@@ -17,7 +17,10 @@
               </div>
             </div>
           </div>
-          <div v-show="!hideScrollIndicator" style="display: flex;align-items: center;justify-content: center;padding-bottom: 90px;"><div class="scroll-indicator"></div></div>
+          <div v-show="!hideScrollIndicator" style="display: flex;align-items: center;justify-content: center;padding-bottom: 90px;">
+            <!-- <div class="scroll-indicator"></div> -->
+            <dotlottie-player src="https://lottie.host/d193ccc9-ae40-4665-b539-8eebc7e42c5b/BckAHteOyq.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></dotlottie-player>
+          </div>
           <!-- <div id="hero-content" class="container-fluid">
             <div class="row">
               <div class="col-12 col-lg-6 mb-5 mb-lg-0 text-left">
@@ -69,9 +72,17 @@
               <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                 <a target="_blank" href="https://arweavehub.com">
                   <div class="project">
-                    <div class="project-image">
-                      <img src="../assets/arweave-hub.png" />
-                    </div>
+                    <div class="project-image" style="background-image: url('/images/arweave-today.jpeg')"></div>
+                    <h3>Arweave Today</h3>
+                    <p>A daily news platform dedicated to Arweave</p>
+                    <span>Arweave Site</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                <a target="_blank" href="https://arweavehub.com">
+                  <div class="project">
+                    <div class="project-image" style="background-image: url('/images/arweave-hub.png')"></div>
                     <h3>The Arweave Hub</h3>
                     <p>Designed & developed the arweave hub - The place to find, create, and attend Arweave & Permaweb events.</p>
                     <span>Arweave Site</span>
@@ -81,9 +92,7 @@
               <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                 <a target="_blank" href="https://cookbook.arweave.dev">
                   <div class="project">
-                    <div class="project-image">
-                      <img src="../assets/permaweb-cookbook.png" />
-                    </div>
+                    <div class="project-image" style="background-image: url('/images/permaweb-cookbook.png')"></div>
                     <h3>Permaweb Cookbook 2.0</h3>
                     <p>Redesigned & developed cookbook 2.0 for the Arweave community</p>
                     <span>Arweave Community</span>
@@ -93,9 +102,7 @@
               <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                 <a target="_blank" href="https://github.com/DevChanQ/react-native-svg-editor">
                   <div class="project">
-                    <div class="project-image">
-                      <img src="../assets/github.png" />
-                    </div>
+                    <div class="project-image" style="background-image: url('/images/github.png')"></div>
                     <h3>React Native SVG Editor</h3>
                     <p>The core that powers SVG Editor & Memeish</p>
                     <span>React Native Library</span>
@@ -105,9 +112,7 @@
               <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                 <a target="_blank" href="https://thumbnaillab.app">
                   <div class="project">
-                    <div class="project-image">
-                      <img src="../assets/svg-editor.png" />
-                    </div>
+                    <div class="project-image" style="background-image: url('/images/svg-editor.png')"></div>
                     <h3>SVG Editor</h3>
                     <p>View & Design Beautiful SVG</p>
                     <span>iOS/Android Application</span>
@@ -117,9 +122,7 @@
               <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                 <a target="_blank" href="/amiibo?name=ken">
                   <div class="project">
-                    <div class="project-image">
-                      <img src="../assets/amiibo.png" />
-                    </div>
+                    <div class="project-image" style="background-image: url('/images/amiibo.png')"></div>
                     <h3>Amiibo Landing Page</h3>
                     <p>A Nintendo Amiibo landing page concept made with Vue.js</p>
                     <span>Concept Website</span>
@@ -129,9 +132,7 @@
               <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                 <a target="_blank" href="https://github.com/DevChanQ/Scrype">
                   <div class="project">
-                    <div class="project-image">
-                      <img src="../assets/github.png" />
-                    </div>
+                    <div class="project-image" style="background-image: url('/images/github.png')"></div>
                     <h3>Scrype</h3>
                     <p>Present code snippet in an interesting way</p>
                     <span>Javascript Library</span>

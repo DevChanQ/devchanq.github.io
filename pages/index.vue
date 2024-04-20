@@ -17,7 +17,7 @@
               </div>
             </div>
           </div>
-          <div v-show="!hideScrollIndicator" style="display: flex;align-items: center;justify-content: center;padding-bottom: 100px;">
+          <div v-show="!hideScrollIndicator" style="display: flex;align-items: center;justify-content: center;padding-bottom: 120px;">
             <!-- <div class="scroll-indicator"></div> -->
             <dotlottie-player src="https://lottie.host/d193ccc9-ae40-4665-b539-8eebc7e42c5b/BckAHteOyq.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></dotlottie-player>
           </div>

@@ -70,7 +70,7 @@
             <h2 class="title">devjeff$ cat <span class="highlight">PROJECTS</span>.md</h2>
             <div class="projects-container row gy-4 gy-sm-5">
               <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                <a target="_blank" href="https://arweavehub.com">
+                <a target="_blank" href="https://arweavehub.com/today">
                   <div class="project">
                     <div class="project-image" style="background-image: url('/images/arweave-today.jpeg')"></div>
                     <h3>Arweave Today</h3>

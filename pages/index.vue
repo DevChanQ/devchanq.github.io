@@ -52,7 +52,7 @@
             <h2 class="title">devjeff$ cat <span class="highlight">ABOUTME</span>.md</h2>
           </div>
           <div class="col-md-7 order-2 order-md-1 text-justify">
-            <p>I am Jeffrey Chan, a 25 years old independent software developer who resides in Hong Kong. Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.</p>
+            <p>I am Jeffrey Chan, a 27 years old independent software developer who resides in Hong Kong. Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.</p>
             <p>My skills includes: <span class="skills">html5 css javascript react-native nodejs electron vue django wagtail</span></p>
             <p class="mb-0">I specialises in web frontend and backend development, as well as UI design but feel free to contact me to discuss about anything :)</p>
           </div>

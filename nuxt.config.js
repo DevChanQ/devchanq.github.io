@@ -2,7 +2,7 @@ export default {
   target: 'static',
   
   head: {
-      title: 'DevJeff - Programmer who strives for the best',
+      title: 'DevJeff - make software that works',
       meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

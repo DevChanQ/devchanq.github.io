@@ -2,7 +2,7 @@
   <div id="devjeff" :style="[height ? {height: `${height}px`} : {}]">
     <div class="devjeff__info">
       <div>
-        <img height="62" src="/logo.svg" />
+        <img height="62" src="/logo.png" />
       </div>
       <div class="devjeff__contacts">
         <a target="_blank" href="https://github.com/DevChanQ">

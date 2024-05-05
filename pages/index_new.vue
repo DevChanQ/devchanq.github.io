@@ -1,6 +1,8 @@
 <template>
   <div id="devjeff">
-    <div class="devjeff__info"></div>
+    <div class="devjeff__info">
+      <img height="62" src="/logo.svg" />
+    </div>
     <div class="devjeff__code-editor">
       <code-editor />
     </div>

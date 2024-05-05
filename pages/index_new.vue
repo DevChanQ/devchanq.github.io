@@ -1,5 +1,5 @@
 <template>
-  <div id="devjeff">
+  <div id="devjeff" :style="[height ? {height: `${height}px`} : {}]">
     <div class="devjeff__info">
       <div>
         <img height="62" src="/logo.svg" />
@@ -27,8 +27,16 @@ import CodeEditor from '@/components/CodeEditor.vue';
 
 export default {
   layout: "empty",
+  data() {
+    return {
+      height: null
+    }
+  },
   components: {
     CodeEditor
+  },
+  mounted() {
+    this.height = window.innerHeight
   }
 }
 </script>

@@ -1,7 +1,72 @@
 <script>
+import showdown from 'showdown';
+
+const converter = new showdown.Converter();
+const src = `
+I am Jeffrey Chan, a 27 years old independent software developer who resides in Hong Kong.
+
+Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.
+
+> My skills includes: html5 css javascript react-native nodejs electron vue django wagtail
+
+I specialises in web frontend and backend development, as well as UI design but feel free to contact me to discuss about anything :)
+
+Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.
+
+> My skills includes: html5 css javascript react-native nodejs electron vue django wagtail
+
+I specialises in web frontend and backend development, as well as UI design but feel free to contact me to discuss about anything :)
+
+Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.
+
+> My skills includes: html5 css javascript react-native nodejs electron vue django wagtail
+
+I specialises in web frontend and backend development, as well as UI design but feel free to contact me to discuss about anything :)
+
+Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.
+
+> My skills includes: html5 css javascript react-native nodejs electron vue django wagtail
+
+I specialises in web frontend and backend development, as well as UI design but feel free to contact me to discuss about anything :)
+
+Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.
+
+> My skills includes: html5 css javascript react-native nodejs electron vue django wagtail
+
+I specialises in web frontend and backend development, as well as UI design but feel free to contact me to discuss about anything :)
+
+Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.
+
+> My skills includes: html5 css javascript react-native nodejs electron vue django wagtail
+
+I specialises in web frontend and backend development, as well as UI design but feel free to contact me to discuss about anything :)
+`
+
+const files = [
+  {
+    filename: "About Me.md",
+    ext: 'md',
+  },
+  {
+    filename: "Projects.md",
+    ext: 'md',
+  }
+]
+
 export default {
   data() {
     return {
+      src,
+      files,
+      active: 0,
+    }
+  },
+  computed: {
+    html() {
+      return converter.makeHtml(this.src);
+    },
+    activeTab() {
+      return this.files[this.active];
     }
   },
   components: {
@@ -11,38 +76,48 @@ export default {
 
 <template>
   <div class="code-editor">
-    <div class="code-editor__tabs">
-      <div class="code-editor__tab active">
-        <div class="code-editor__tab-border-top"></div>
-        <div class="code-editor__tab-name-container">
-          <div class="code-editor__icon-label">
-            <span class="code-editor__icon-label-name">package.json</span>
+    <div class="code-editor__tabs-and-breadcrumbs">
+
+      <div class="code-editor__tabs">
+        <div v-for="file, index in files" :key="file.filename" class="code-editor__tab" :class="{active: active === index}" @click="active=index">
+          <div class="code-editor__tab-border-top"></div>
+          <div class="code-editor__tab-name-container">
+            <div class="code-editor__icon-label" :class="[`${file.ext}-ext`]">
+              <span class="code-editor__icon-label-name">{{ file.filename }}</span>
+            </div>
           </div>
+          <div class="code-editor__tab-action">
+          </div>
+          <div class="code-editor__tab-border-bottom"></div>
         </div>
-        <div class="code-editor__tab-action">
-        </div>
-        <div class="code-editor__tab-border-bottom"></div>
       </div>
-    </div>
-    <div class="code-editor__breadcrumbs">
-      <div class="code-editor__breadcrumb-item">
-        <div class="code-editor__icon-label">
-          <span class="code-editor__icon-label-name">package.json</span>
+
+      <div class="code-editor__breadcrumbs">
+        <div class="code-editor__breadcrumb-item">
+          <div class="code-editor__icon-label" :class="[`${activeTab.ext}-ext`]">
+            <span class="code-editor__icon-label-name">{{ activeTab.filename }}</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="code-editor__editor">
+    <div class="code-editor__editor" v-html="html">
+      
     </div>
   </div>
 </template>
 
 <style lang="scss">
+@font-face {
+  font-family: 'seti';
+  src: url('/fonts/seti.woff');
+}
+
 .code-editor {
   --editor-bg: #24292E;
   --editor-fg: #e1e4e8;
 
-  --editor-tab-height: 35px;
+  --editor-tab-height: 46px;
   --editor-tabs-bg: #1f2428;
   --editor-tabs-border-bottom-color: #1B1F23;
 
@@ -61,11 +136,23 @@ export default {
 }
 
 .code-editor {
+  flex: 1;
   font-size: 13px;
   min-height: 100%;
+  height: fit-content;
   background: var(--editor-bg);
 
+  *, *::before, *::after {
+    box-sizing: initial;
+  }
+
+  .code-editor__tabs-and-breadcrumbs {
+    position: sticky;
+    top: 0;
+  }
+
   .code-editor__tabs {
+    display: flex;
     width: 100%;
     position: relative;
     background: var(--editor-tabs-bg);
@@ -75,6 +162,7 @@ export default {
       display: block;
       position: absolute;
       left: 0;
+      bottom: 0;
       width: 100%;
       height: 1px;
       background: var(--editor-tabs-border-bottom-color);
@@ -105,6 +193,17 @@ export default {
       -moz-osx-font-smoothing: grayscale;
       flex-shrink: 0;
       vertical-align: top;
+
+      font-family: 'seti';
+      font-size: 150%;
+    }
+    
+    &.md-ext {
+      &:before {
+        color: #519aba;
+        content: '\E04D';
+        background-image: unset;
+      }
     }
   }
 
@@ -127,6 +226,7 @@ export default {
       position: absolute;
       height: 1px;
       width: 100%;
+      z-index: 9;
     }
 
     .code-editor__tab-border-bottom {
@@ -136,7 +236,7 @@ export default {
       position: absolute;
       height: 1px;
       width: 100%;
-      bottom: -1px;
+      bottom: 0;
       z-index: 10;
     }
 
@@ -171,6 +271,10 @@ export default {
       .code-editor__tab-name-container {
         color: var(--editor-tab-active-fg);
       }
+    }
+
+    &:hover {
+      background: var(--editor-tab-active-bg);
     }
   }
 
@@ -222,8 +326,13 @@ export default {
   }
 
   .code-editor__editor {
+    font-size: 18px;
     color: var(--editor-fg);
-    padding-left: 66px;
+    padding: 32px;
+
+    * {
+      color: inherit;
+    }
   }
 }
 </style>

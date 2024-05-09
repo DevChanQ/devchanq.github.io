@@ -89,6 +89,13 @@ export default {
   a:not(:last-child) {
     margin-right: 12px;
   }
+
+  @media screen and (max-width: 575px) {
+    .devjeff__icon {
+      width: 28px;
+      height: 28px;
+    }
+  }
 }
 
 .devjeff__icon {

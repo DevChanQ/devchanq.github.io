@@ -1,51 +1,15 @@
 <script>
 import showdown from 'showdown';
 
+import aboutme from '../README.md';
+
 const converter = new showdown.Converter();
-const src = `
-I am Jeffrey Chan, a 27 years old independent software developer who resides in Hong Kong.
-
-Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.
-
-> My skills includes: html5 css javascript react-native nodejs electron vue django wagtail
-
-I specialises in web frontend and backend development, as well as UI design but feel free to contact me to discuss about anything :)
-
-Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.
-
-> My skills includes: html5 css javascript react-native nodejs electron vue django wagtail
-
-I specialises in web frontend and backend development, as well as UI design but feel free to contact me to discuss about anything :)
-
-Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.
-
-> My skills includes: html5 css javascript react-native nodejs electron vue django wagtail
-
-I specialises in web frontend and backend development, as well as UI design but feel free to contact me to discuss about anything :)
-
-Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.
-
-> My skills includes: html5 css javascript react-native nodejs electron vue django wagtail
-
-I specialises in web frontend and backend development, as well as UI design but feel free to contact me to discuss about anything :)
-
-Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.
-
-> My skills includes: html5 css javascript react-native nodejs electron vue django wagtail
-
-I specialises in web frontend and backend development, as well as UI design but feel free to contact me to discuss about anything :)
-
-Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.
-
-> My skills includes: html5 css javascript react-native nodejs electron vue django wagtail
-
-I specialises in web frontend and backend development, as well as UI design but feel free to contact me to discuss about anything :)
-`
 
 const files = [
   {
     filename: "About Me.md",
     ext: 'md',
+    md: aboutme
   },
   {
     filename: "Projects.md",
@@ -56,14 +20,13 @@ const files = [
 export default {
   data() {
     return {
-      src,
       files,
       active: 0,
     }
   },
   computed: {
     html() {
-      return converter.makeHtml(this.src);
+      return converter.makeHtml(this.activeTab['md']);
     },
     activeTab() {
       return this.files[this.active];
@@ -101,9 +64,7 @@ export default {
       </div>
     </div>
 
-    <div class="code-editor__editor" v-html="html">
-      
-    </div>
+    <div class="code-editor__editor" v-html="html"></div>
   </div>
 </template>
 
@@ -328,10 +289,14 @@ export default {
   .code-editor__editor {
     font-size: 18px;
     color: var(--editor-fg);
-    padding: 32px;
+    padding: 0 32px 32px;
 
     * {
       color: inherit;
+    }
+
+    h2 {
+      margin: 32px 0 16px;
     }
   }
 }

@@ -94,6 +94,34 @@ export default {
   --editor-tab-active-fg: #e1e4e8;
   --editor-tab-active-border-top-color: #f9826c;
   --editor-tab-active-border-bottom-color: #24292e;
+
+  --editor-slider-bg: rgba(106, 115, 125, 0.2);
+  --editor-slider-active-bg: rgba(106, 115, 125, 0.53);
+}
+
+.code-editor.ayu {
+  --editor-bg: #0b0e14;
+  --editor-fg: #bfbdb6;
+
+  --editor-tab-height: 46px;
+  --editor-tabs-bg: #0b0e14;
+  --editor-tabs-border-bottom-color: #0b0e14;
+
+  --editor-tab-breadcrumbs-bg: #0b0e14;
+  --editor-tab-breadcrumbs-fg: rgba(86, 91, 102, 0.8);
+
+  --editor-tab-inactive-bg:#0b0e14;
+  --editor-tab-inactive-fg: #565b66;
+  --editor-tab-inactive-border-top-color: #0b0e14;
+  --editor-tab-inactive-border-bottom-color: #565b66;
+
+  --editor-tab-active-bg: #0b0e14;
+  --editor-tab-active-fg: #bfbdb6;
+  --editor-tab-active-border-top-color: #0b0e14;
+  --editor-tab-active-border-bottom-color: #e6b450;
+
+  --editor-slider-bg: rgba(86, 91, 102, 0.4);
+  --editor-slider-active-bg: rgba(86, 91, 102, 0.7);
 }
 
 .code-editor {
@@ -102,6 +130,29 @@ export default {
   min-height: 100%;
   height: fit-content;
   background: var(--editor-bg);
+
+  overflow-y: scroll;
+  height: 100%;
+
+  @media screen and (max-width: 575px) {
+    overflow-y: initial;
+  }
+
+  &::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--editor-bg);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--editor-slider-bg);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--editor-slider-active-bg);
+  }
 
   *, *::before, *::after {
     box-sizing: initial;

@@ -2,7 +2,7 @@
   <div id="devjeff" :style="[height ? {height: `${height}px`} : {}]">
     <div class="devjeff__info">
       <div>
-        <img height="62" src="/logo.png" />
+        <img height="56" src="/logo.png" />
       </div>
       <div class="devjeff__contacts">
         <a target="_blank" href="https://github.com/DevChanQ">
@@ -72,15 +72,7 @@ export default {
 }
 
 .devjeff__code-editor {
-  display: flex;
   flex: 1;
-
-  overflow: scroll;
-  height: 100%;
-
-  @media screen and (max-width: 575px) {
-    overflow: initial;
-  }
 }
 
 .devjeff__contacts {

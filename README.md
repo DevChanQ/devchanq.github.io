@@ -1,6 +1,6 @@
 ## Hello <img src="https://devjeff.info/wave.gif" width="40"> I am <img src="https://devjeff.info/logo.png" width="70"> Chan
 
-I am a 27 years old independent software developer who resides in Hong Kong. I (try to) make software that's fun, and cool. My skills includes: html5 css javascript react-native nodejs electron vue django wagtail.
+I am a 27 years old independent software developer who resides in Hong Kong. I make software experience that's fun 🤩, and cool 😎.
 
 I specialises in web frontend and backend development but feel free to contact me to discuss about anything 😉
 

@@ -4,16 +4,15 @@
       <div>
         <img height="56" src="/logo.png" />
       </div>
-      <div class="devjeff__contacts">
-        <a target="_blank" href="https://github.com/DevChanQ">
-          <div class="devjeff__icon github"></div>
-        </a>
-        <a target="_blank" href="https://twitter.com/DevJeffHK">
-          <div class="devjeff__icon twitter"></div>
-        </a>
-        <a href="mailto:jeffrey@devjeff.info">
-          <div class="devjeff__icon email"></div>
-        </a>
+      <div>
+        <div class="devjeff__contacts">
+          <div class="devjeff__check-out-the-source"></div>
+
+          <a target="_blank" href="https://github.com/DevChanQ/devchanq.github.io">
+            <div class="devjeff__icon github"></div>
+          </a>
+        </div>
+        <p class="d-none d-sm-block mb-0 mt-3">© Jeffrey Chan</p>
       </div>
     </div>
     <div class="devjeff__code-editor">
@@ -48,6 +47,10 @@ export default {
   width: 100%;
   height: 100vh;
 
+  img {
+    max-width: 100%;
+  }
+
   @media screen and (max-width: 575px) {
     flex-flow: column;
   }
@@ -68,6 +71,7 @@ export default {
   @media screen and (max-width: 575px) {
     flex-flow: row;
     align-items: center;
+    padding: 48px 32px;
   }
 }
 
@@ -76,16 +80,49 @@ export default {
 }
 
 .devjeff__contacts {
-  display: flex;
+  display: inline-block;
+  position: relative;
+  
+  .devjeff__check-out-the-source {
+    width: 260px;
+    height: 130px;
+    transform: translate(100%, -100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-image: url("/source.png");
+    background-position: left bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 
   a:not(:last-child) {
     margin-right: 12px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .devjeff__check-out-the-source {
+      width: 120px;
+      top: -5px;
+      right: 100%;
+    }
   }
 
   @media screen and (max-width: 575px) {
     .devjeff__icon {
       width: 28px;
       height: 28px;
+    }
+
+    .devjeff__check-out-the-source {
+      width: 130px;
+      height: 73px;
+      transform: none;
+      top: initial;
+      right: 10px;
+      bottom: 5px;
+      background-image: url("/source-mobile.png");
     }
   }
 }

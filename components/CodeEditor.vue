@@ -10,10 +10,6 @@ const files = [
     filename: "About Me.md",
     ext: 'md',
     md: aboutme
-  },
-  {
-    filename: "Projects.md",
-    ext: 'md',
   }
 ]
 
@@ -347,7 +343,11 @@ export default {
     }
 
     h2 {
-      margin: 32px 0 16px;
+      margin: 48px 0 24px;
+    }
+
+    p {
+      margin-bottom: 16px;
     }
   }
 }

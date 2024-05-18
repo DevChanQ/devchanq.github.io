@@ -12,7 +12,7 @@
             <div class="devjeff__icon github"></div>
           </a>
         </div>
-        <p class="d-none d-sm-block mb-0 mt-3">© Jeffrey Chan</p>
+        <p style="font-size: 12px;" class="d-none d-sm-block mb-0 mt-3">© Jeffrey Chan</p>
       </div>
     </div>
     <div class="devjeff__code-editor">
@@ -88,8 +88,8 @@ export default {
     height: 130px;
     transform: translate(100%, -100%);
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -5px;
+    right: 15px;
 
     background-image: url("/source.png");
     background-position: left bottom;

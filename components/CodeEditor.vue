@@ -34,7 +34,7 @@ export default {
 </script>
 
 <template>
-  <div class="code-editor">
+  <div class="code-editor ayu">
     <div class="code-editor__tabs-and-breadcrumbs">
 
       <div class="code-editor__tabs">
@@ -115,6 +115,31 @@ export default {
   --editor-tab-active-fg: #bfbdb6;
   --editor-tab-active-border-top-color: #0b0e14;
   --editor-tab-active-border-bottom-color: #e6b450;
+
+  --editor-slider-bg: rgba(86, 91, 102, 0.4);
+  --editor-slider-active-bg: rgba(86, 91, 102, 0.7);
+}
+
+.code-editor.gruvbox {
+  --editor-bg: #1d2021;
+  --editor-fg: #ebdbb2;
+
+  --editor-tab-height: 46px;
+  --editor-tabs-bg: #1d2021;
+  --editor-tabs-border-bottom-color: #3c3836;
+
+  --editor-tab-breadcrumbs-bg: #0b0e14;
+  --editor-tab-breadcrumbs-fg: rgba(86, 91, 102, 0.8);
+
+  --editor-tab-inactive-bg:#1d2021;
+  --editor-tab-inactive-fg: #a89984;
+  --editor-tab-inactive-border-top-color: #0b0e14;
+  --editor-tab-inactive-border-bottom-color: #565b66;
+
+  --editor-tab-active-bg: #32302f;
+  --editor-tab-active-fg: #ebdbb2;
+  --editor-tab-active-border-top-color: #ebdbb2;
+  --editor-tab-active-border-bottom-color: #689d6a;
 
   --editor-slider-bg: rgba(86, 91, 102, 0.4);
   --editor-slider-active-bg: rgba(86, 91, 102, 0.7);

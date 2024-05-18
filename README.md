@@ -10,9 +10,9 @@ You can find me at &nbsp; [<img src="https://img.icons8.com/?size=256&id=yoQabS8
 
 [Arweave Today](https://arweavehub.com/today) - daily dose of Arweave, delivered right to you
 
-<img src="https://devjeff.info/images/svg-editor-logo.png" width="26"> [SVG Editor](https://thumbnaillab.app) - vector graphic designer app built with React Native
+<img src="https://devjeff.info/images/svg-editor-logo.png" width="20"> [SVG Editor](https://thumbnaillab.app) - vector graphic designer app built with React Native
 
-<img src="https://devjeff.info/icons/github.svg" width="26"> [react-native-svg-editor](https://github.com/DevChanQ/react-native-svg-editor) - The library that powers SVG Editor
+<img src="https://devjeff.info/github-logo.svg" width="20"> [react-native-svg-editor](https://github.com/DevChanQ/react-native-svg-editor) - The library that powers SVG Editor
 
 [Amiibo concept page](https://devjeff.info/amiibo?name=ken) - Cool concept site with fun animations built with Vue.js & gsap
 

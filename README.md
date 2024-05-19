@@ -8,7 +8,7 @@ You can find me at &nbsp; [<img src="https://img.icons8.com/?size=256&id=yoQabS8
 
 ## 🏗️ Projects
 
-[Arweave Today](https://arweavehub.com/today) - daily dose of Arweave, delivered right to you
+<img src="https://devjeff.info/arweave.svg" width="20"> [Arweave Today](https://arweavehub.com/today) - daily dose of Arweave, delivered right to you
 
 <img src="https://devjeff.info/images/svg-editor-logo.png" width="20"> [SVG Editor](https://thumbnaillab.app) - vector graphic designer app built with React Native
 

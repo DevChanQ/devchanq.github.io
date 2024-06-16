@@ -1,6 +1,5 @@
-<script>
+<script lang="ts">
 import showdown from 'showdown';
-
 import aboutme from '../README.md';
 
 const converter = new showdown.Converter();

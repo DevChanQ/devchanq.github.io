@@ -1,8 +1,20 @@
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+
+const height = ref<Number>(0);
+
+onMounted(() => {
+  height.value = window.innerHeight;
+});
+
+// definePageMeta({ layout: false });
+</script>
+
 <template>
   <div id="devjeff" :style="[height ? {height: `${height}px`} : {}]">
     <div class="devjeff__info">
       <div>
-        <img height="56" src="/logo.png" />
+        <img height="56" src="@/assets/logo.png" />
       </div>
       <div>
         <div class="devjeff__contacts">
@@ -16,29 +28,10 @@
       </div>
     </div>
     <div class="devjeff__code-editor">
-      <code-editor />
+      <CodeEditor />
     </div>
   </div>
 </template>
-
-<script>
-import CodeEditor from '@/components/CodeEditor.vue';
-
-export default {
-  layout: "empty",
-  data() {
-    return {
-      height: null
-    }
-  },
-  components: {
-    CodeEditor
-  },
-  mounted() {
-    this.height = window.innerHeight
-  }
-}
-</script>
 
 <style lang="scss">
 #devjeff {

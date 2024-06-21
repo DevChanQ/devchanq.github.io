@@ -1,5 +1,9 @@
 import Scrype from 'scrype';
 
-export default ({ app }, inject) => {
-  inject('Scrype', Scrype)
-}
+export default defineNuxtPlugin(() => {
+  return {
+    provide: {
+      scrype: Scrype
+    }
+  }
+})

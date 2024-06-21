@@ -1,4 +1,6 @@
-export default {
+import mdPlugin, { Mode } from 'vite-plugin-markdown';
+
+export default defineNuxtConfig({
   target: 'static',
   
   head: {
@@ -19,13 +21,6 @@ export default {
       '@/assets/styles/common.scss'
   ],
 
-  components: true,
-
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-  ],
-
   plugins: [
     '~/plugins/agent.js',
     '~/plugins/scrype.client.js',
@@ -33,10 +28,13 @@ export default {
     '~/plugins/ga.client.js',
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+  // vite config
+  vite: {
+    plugins: [
+      mdPlugin({
+        mode: [Mode.MARKDOWN]
+      })
+    ]
   },
 
   build: {
@@ -48,4 +46,4 @@ export default {
       });
     }
   }
-}
+});

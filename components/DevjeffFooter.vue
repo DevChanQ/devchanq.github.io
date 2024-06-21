@@ -16,8 +16,11 @@
 footer {
   background: black;
   font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-  color: white;
   position: relative;
+
+  h3, p {
+    color: white;
+  }
 
   a {
     color: $secondary;

@@ -18,8 +18,7 @@ const getMobileOperatingSystem = () => {
   return "unknown";
 }
 
-export default ({ app }, inject) => {
-  
+export default defineNuxtPlugin(() => {
   let agent = 'unknown';
   try {
     agent = getMobileOperatingSystem()
@@ -27,5 +26,9 @@ export default ({ app }, inject) => {
 
   }
 
-  inject('agent', agent)
-}
+  return {
+    provide: {
+      agent
+    }
+  }
+});

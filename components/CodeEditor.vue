@@ -1,10 +1,16 @@
-<script lang="ts">
+<script setup lang="ts">
 import showdown from 'showdown';
-import aboutme from '../README.md';
+import { markdown as aboutme } from '../README.md';
+
+type File = {
+  filename: string,
+  ext: string,
+  md: string,
+}
 
 const converter = new showdown.Converter();
 
-const files = [
+const files : File[] = [
   {
     filename: "About Me.md",
     ext: 'md',
@@ -12,24 +18,12 @@ const files = [
   }
 ]
 
-export default {
-  data() {
-    return {
-      files,
-      active: 0,
-    }
-  },
-  computed: {
-    html() {
-      return converter.makeHtml(this.activeTab['md']);
-    },
-    activeTab() {
-      return this.files[this.active];
-    }
-  },
-  components: {
-  },
-}
+// refs
+const active = ref<number>(0)
+
+// computed
+const activeTab = computed(() => files[active.value])
+const html = computed(() => converter.makeHtml(activeTab.value['md']))
 </script>
 
 <template>

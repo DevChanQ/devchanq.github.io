@@ -21,13 +21,6 @@ export default defineNuxtConfig({
       '@/assets/styles/common.scss'
   ],
 
-  plugins: [
-    '~/plugins/agent.js',
-    '~/plugins/scrype.client.js',
-    '~/plugins/components.client.js',
-    '~/plugins/ga.client.js',
-  ],
-
   // vite config
   vite: {
     plugins: [

@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-
-const height = ref<Number>(0);
+const height = ref<number>(0);
 
 onMounted(() => {
   height.value = window.innerHeight;
 });
 
-// definePageMeta({ layout: false });
+definePageMeta({ layout: false });
 </script>
 
 <template>

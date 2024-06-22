@@ -1,3 +1,34 @@
+<script setup lang="ts">
+const { $scrype } = useNuxtApp();
+
+const sidenavShown = ref<boolean>(false);
+const hideScrollIndicator = ref<boolean>(false);
+
+onMounted(() => {
+  let options = {
+      pixelPerStep: 8,
+      position: 'top',
+      codeContainerSelector:'#code-container',
+      code: `class DevJeff {
+    constructor () {
+      this.yob = 1996;
+      this.from = 'Hong Kang ~~~~ong';
+    }
+    about () {...}
+    projects () {...}
+    blog () {...}
+  }
+> let developer = new DevJeff();`
+    }
+
+    new $scrype('#sticky', options);
+})
+
+definePageMeta({
+  layout: "empty"
+})
+</script>
+
 <template>
   <div id="devjeff__default-layout" class="light" :class="{'sidenav-shown': sidenavShown}">
     <div id="devjeff__hero_layer" class="container">
@@ -149,46 +180,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import DevjeffNav from '~/components/DevjeffNav';
-import DevjeffFooter from '~/components/DevjeffFooter';
-
-export default {
-  layout: 'empty',
-  data() {
-    return {
-      sidenavShown: false,
-      hideScrollIndicator: false,
-    }
-  },
-  mounted() {
-    let options = {
-      pixelPerStep: 8,
-      position: 'top',
-      codeContainerSelector:'#code-container',
-      code: `class DevJeff {
-    constructor () {
-      this.yob = 1996;
-      this.from = 'Hong Kang ~~~~ong';
-    }
-    about () {...}
-    projects () {...}
-    blog () {...}
-  }
-> let developer = new DevJeff();`
-    }
-
-    new this.$Scrype('#sticky', options);
-  },
-  methods: {
-    showSidenav() {
-      console.log('hahahaha')
-    }
-  },
-  components: { DevjeffNav, DevjeffFooter }
-}
-</script>
 
 <style lang="scss">
 @import "@/assets/styles/index.scss";

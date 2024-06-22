@@ -6,7 +6,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "dev": "nuxt dev",
-    "deploy": "nuxt generate && push-dir --dir=dist --branch=gh-pages --cleanup --verbose",
+    "deploy": "nuxt generate && push-dir --dir=.output/public --branch=gh-pages --cleanup --verbose",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"

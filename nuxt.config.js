@@ -1,7 +1,7 @@
 import mdPlugin, { Mode } from 'vite-plugin-markdown';
 
 export default defineNuxtConfig({
-  target: 'static',
+  ssr: true,
   
   head: {
       title: 'DevJeff - make software that works',

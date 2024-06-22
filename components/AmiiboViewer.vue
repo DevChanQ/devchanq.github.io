@@ -17,8 +17,8 @@
           <div :class="{'amiibo-detail-container': true, 'mobile': isMobile}" v-show="!more && !dragging">
             <img :src="currentAmiibo.origin.image" width="80%" />
             <h2>{{ currentAmiibo.name }}</h2>
-            <a href="javascript: void(0)" @click="learnMore" class="button">Learn More</a>
-            <a href="javascript: void(0)" @click="$router.push({name: 'amiibo', query: {more: true}})" class="button">Add to Cart</a>
+            <a href="javascript: void(0)" @click="$emit('more')" class="button">Learn More</a>
+            <a href="javascript: void(0)" @click="$emit('more')" class="button">Add to Cart</a>
           </div>
         </transition>
         <transition name="slide-up">
@@ -27,7 +27,7 @@
             <div class="amiibo-more-container">
               <p>{{ currentAmiibo.description }}</p>
             </div>
-            <a href="javascript: void(0)" @click="$router.push({name: 'amiibo'})" class="button">Back</a>
+            <a href="javascript: void(0)" @click="$emit('back')" class="button">Back</a>
           </div>
         </transition>
       </div>
@@ -92,9 +92,6 @@ export default {
     }
   },
   methods: {
-    learnMore() {
-    },
-
     dragStart(e) {
       this.canDrag = true
       if (e.type === "mousedown") startX = e.clientX;

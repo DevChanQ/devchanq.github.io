@@ -140,12 +140,26 @@ definePageMeta({ layout: false });
         <img src="@/assets/images/amiibo.png"/>
       </a>
       <ul style="margin-left: auto;">
-        <li><a href="javascript: void(0)" @click="route.query.menu ? router.push('/amiibo') : router.push('/amiibo?menu=true')">{{ route.query.menu ? 'Close' : 'Menu' }}</a></li>
+        <li>
+          <a href="javascript: void(0)" @click="router.push({name: 'amiibo', query: route.query.menu ? {name: current} : {name: current, menu: true}})">{{ route.query.menu ? 'Close' : 'Menu' }}</a></li>
       </ul>
     </nav>
     <div class="amiibo-init">
       <client-only>
-        <amiibo-viewer :about="about" :menu="menu" :next="siblings.next" :last="siblings.last" :style="{'opacity': route.name ==='about' ? 0.3 : 1}" :more="more" @next="router.push({name: 'amiibo', query: {name: siblings.next}})" @last="router.push({name: 'amiibo', query: {name: siblings.last}})" @amiiboClicked="router.push({name: 'amiibo', query: {name: $event.name}})" :current="current" :amiibos="amiibos" />
+        <amiibo-viewer
+          :amiibos="amiibos"
+          :about="about"
+          :menu="menu"
+          :current="current"
+          :next="siblings.next"
+          :last="siblings.last"
+          :style="{'opacity': route.name ==='about' ? 0.3 : 1}"
+          :more="more"
+          @next="router.push({name: 'amiibo', query: {name: siblings.next}})"
+          @last="router.push({name: 'amiibo', query: {name: siblings.last}})"
+          @more="router.push({name: 'amiibo', query: {more: true, name: current}})"
+          @back="router.push({name: 'amiibo', query: {name: current}})"
+          @amiiboClicked="router.push({name: 'amiibo', query: {name: $event.name}})" />
       </client-only>
     </div>
   </div>
@@ -185,7 +199,7 @@ nav {
   left: 0;
   right: 0;
   top: 0;
-  padding: 40px;
+  padding: 32px;
 
   display: flex;
 

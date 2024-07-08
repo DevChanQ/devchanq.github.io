@@ -5,6 +5,9 @@ onMounted(() => {
   height.value = window.innerHeight;
 });
 
+useHead({
+  title: "Hello.",
+})
 definePageMeta({ layout: false });
 </script>
 
@@ -16,7 +19,9 @@ definePageMeta({ layout: false });
       </div>
       <div>
         <div class="devjeff__contacts">
-          <div class="devjeff__check-out-the-source"></div>
+          <a target="_blank" href="https://github.com/DevChanQ/devchanq.github.io">
+            <div class="devjeff__check-out-the-source"></div>
+          </a>
 
           <a target="_blank" href="https://github.com/DevChanQ/devchanq.github.io">
             <div class="devjeff__icon github"></div>

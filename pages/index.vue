@@ -81,7 +81,7 @@ definePageMeta({ layout: false });
   
   .devjeff__check-out-the-source {
     width: 260px;
-    height: 130px;
+    height: 100px;
     transform: translate(100%, -100%);
     position: absolute;
     top: -5px;

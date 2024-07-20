@@ -8,6 +8,12 @@ I make software that's fun, and cool.
 
 You can find me on [X](https://twitter.com/DevJeffHK) or contact me via <a href="mailto:jeffrey@devjeff.info">mail</a>
 
+## Learning.
+
+🤖 Machine Learning
+🤗 Hugging Face
+🧑‍💻 Rust
+
 ## Projects.
 
 <img src="https://devjeff.info/arweave.svg" width="20"> [Arweave Today](https://arweavehub.com/today) - daily dose of Arweave, delivered right to you

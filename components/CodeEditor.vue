@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import showdown from 'showdown';
+import VueMarkdown from 'vue-markdown-render';
+import markdownit from 'markdown-it';
+import iterator from 'markdown-it-for-inline';
+
 import { markdown as aboutme } from '../README.md';
 
 type File = {
@@ -8,7 +11,13 @@ type File = {
   md: string,
 }
 
-const converter = new showdown.Converter();
+const inlinePlugin = (md: any) => {
+  md.use(iterator, 'url_new_win', 'link_open', (tokens: any, idx: string) => {
+    tokens[idx].attrSet('target', '_blank');
+  });
+};
+
+const plugins = [inlinePlugin,];
 
 const files : File[] = [
   {
@@ -23,7 +32,6 @@ const active = ref<number>(0)
 
 // computed
 const activeTab = computed(() => files[active.value])
-const html = computed(() => converter.makeHtml(activeTab.value['md']))
 </script>
 
 <template>
@@ -53,7 +61,9 @@ const html = computed(() => converter.makeHtml(activeTab.value['md']))
       </div>
     </div>
 
-    <div class="code-editor__editor" v-html="html"></div>
+    <div class="code-editor__editor">
+      <VueMarkdown :source="activeTab.md" :options="{'html': true}" :plugins="plugins" />
+    </div>
   </div>
 </template>
 

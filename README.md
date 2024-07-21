@@ -1,6 +1,6 @@
 ## Hello.
 
-I am Jeffrey Chan. I am a 27 years old independent software developer who resides in Hong Kong.
+I am Jeffrey Chan. I am a software engineer who resides in Hong Kong.
 
 I specialises in frontend and backend development but feel free to contact me to discuss about anything.
 
@@ -8,7 +8,7 @@ I make software that's fun, and cool.
 
 You can find me on [X](https://twitter.com/DevJeffHK) or contact me via <a href="mailto:jeffrey@devjeff.info">mail</a>
 
-## Learning.
+## What I am learning.
 
 🤖 Machine Learning
 
@@ -16,7 +16,7 @@ You can find me on [X](https://twitter.com/DevJeffHK) or contact me via <a href=
 
 🧑‍💻 Rust
 
-## Projects.
+## What I worked on.
 
 <img src="https://devjeff.info/arweave.svg" width="20"> [Arweave Today](https://arweavehub.com/today) - daily dose of Arweave, delivered right to you
 
@@ -30,6 +30,6 @@ You can find me on [X](https://twitter.com/DevJeffHK) or contact me via <a href=
 
 [Pikabu tweak](https://github.com/DevChanQ/pikabu) - Volume Hud tweak for jailbroken iOS devices
 
-## Stats.
+## Some stats about me.
 
 <img src="https://myreadme.vercel.app/api/embed/DevChanQ?panels=toprepositories,toplanguages,commitgraph" />

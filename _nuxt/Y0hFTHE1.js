@@ -1,0 +1,1 @@
+import{_ as o,v as s,a0 as a,a1 as c,t,a2 as r}from"./C3yNutd8.js";const n={},l={id:"empty-layout"};function p(e,d){return t(),s("div",l,[a(e.$slots,"default"),(t(),c(r("script"),{src:"https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs",type:"module"}))])}const i=o(n,[["render",p]]);export{i as default};

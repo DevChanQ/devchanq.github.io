@@ -16,7 +16,7 @@ You can find me on [X](https://twitter.com/DevJeffHK) or contact me via <a href=
 
 🧑‍💻 Rust
 
-## What I worked on.
+## Recent projects.
 
 <img src="https://devjeff.info/arweave.svg" width="20"> [Arweave Today](https://arweavehub.com/today) - daily dose of Arweave, delivered right to you
 
@@ -29,7 +29,3 @@ You can find me on [X](https://twitter.com/DevJeffHK) or contact me via <a href=
 [Amiibo concept page](https://devjeff.info/amiibo?name=ken) - Cool concept site with fun animations built with Vue.js & gsap
 
 [Pikabu tweak](https://github.com/DevChanQ/pikabu) - Volume Hud tweak for jailbroken iOS devices
-
-## Some stats about me.
-
-<img src="https://myreadme.vercel.app/api/embed/DevChanQ?panels=toprepositories,toplanguages,commitgraph" />

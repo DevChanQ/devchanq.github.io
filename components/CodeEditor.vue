@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import VueMarkdown from 'vue-markdown-render';
-import markdownit from 'markdown-it';
 import iterator from 'markdown-it-for-inline';
 
 import { markdown as aboutme } from '../README.md';
@@ -19,19 +18,70 @@ const inlinePlugin = (md: any) => {
 
 const plugins = [inlinePlugin,];
 
-const files : File[] = [
+// refs
+const active = ref<number>(0)
+const files = ref<File[]>([
   {
     filename: "About Me.md",
     ext: 'md',
     md: aboutme
   }
-]
-
-// refs
-const active = ref<number>(0)
+])
 
 // computed
-const activeTab = computed(() => files[active.value])
+const activeTab = computed(() => files.value[active.value])
+
+// methods
+
+const openGithubReadmeTab = async (repo: string) => {
+  // check if the repo is already opened
+  const openedIndex = files.value.findIndex(file => file.filename === `${repo}/README.md`);
+  if (openedIndex !== -1) {
+    active.value = openedIndex;
+    return;
+  }
+
+  files.value.push({
+    filename: `${repo}/README.md`,
+    ext: 'md',
+    md: "Loading..."
+  });
+
+  let repoUrl = `https://raw.githubusercontent.com/${repo}/master`
+  let res = await fetch(`${repoUrl}/README.md`)
+  if (!res.ok) {
+    // try to fetch from main branch
+    repoUrl = `https://raw.githubusercontent.com/${repo}/main`;
+    res = await fetch(`${repoUrl}/README.md`);
+    if (!res.ok) return;
+  }
+
+  const content = await res.text()
+
+  // replace all relative links to absolute links for images based on the repo url
+  const replacedContent = content.replace(/(!\[.*\]\()(.+)(\))/g, `$1${repoUrl}/$2$3`).replace(/(<img.*?src=")\/(.*?")/g, `$1${repoUrl}/$2`);
+
+  files.value[files.value.length - 1].md = replacedContent;
+  active.value = files.value.length - 1;
+}
+
+const onMarkdownClick = (e: PointerEvent) => {
+  const target = e.target;
+  if (target instanceof HTMLAnchorElement) {
+    e.preventDefault();
+    
+    const url = target.href;
+    // get github.com/DevChanQ regex match
+    const matches = url.match(/github.com\/(DevChanQ\/.*)/);
+    if (!matches || !matches[1]) {
+      window.open(url, '_blank');
+      return;
+    }
+
+    const repo = matches[1];
+    openGithubReadmeTab(repo);
+  }
+}
 </script>
 
 <template>
@@ -62,7 +112,7 @@ const activeTab = computed(() => files[active.value])
     </div>
 
     <div class="code-editor__editor">
-      <VueMarkdown :source="activeTab.md" :options="{'html': true}" :plugins="plugins" />
+      <VueMarkdown @click="onMarkdownClick" :source="activeTab.md" :options="{'html': true}" :plugins="plugins" />
     </div>
   </div>
 </template>
@@ -370,8 +420,19 @@ const activeTab = computed(() => files[active.value])
       color: inherit;
     }
 
-    h2 {
+    h1, h2, h3 {
       margin: 48px 0 24px;
+    }
+
+    img {
+      border-radius: 4px;
+      max-width: 500px !important;
+    }
+
+    pre {
+      padding: 8px 12px;
+      background: #3f3f3f;
+      border-radius: 4px;
     }
 
     p {

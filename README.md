@@ -26,6 +26,6 @@ You can find me on [X](https://twitter.com/DevJeffHK) or contact me via <a href=
 
 <img src="https://devjeff.info/github-logo.svg" width="20"> [react-native-svg-editor](https://github.com/DevChanQ/react-native-svg-editor) - The library that powers SVG Editor
 
-[Amiibo concept page](https://devjeff.info/amiibo?name=ken) - Cool concept site with fun animations built with Vue.js & gsap
+<img src="https://devjeff.info/github-logo.svg" width="20"> [Pikabu tweak](https://github.com/DevChanQ/pikabu) - Volume Hud tweak for jailbroken iOS devices
 
-[Pikabu tweak](https://github.com/DevChanQ/pikabu) - Volume Hud tweak for jailbroken iOS devices
+[Amiibo concept page](https://devjeff.info/amiibo?name=ken) - Cool concept site with fun animations built with Vue.js & gsap

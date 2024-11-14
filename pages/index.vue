@@ -58,10 +58,6 @@ definePageMeta({ layout: false });
   width: 100%;
   height: 100vh;
 
-  img {
-    max-width: 100%;
-  }
-
   @media screen and (max-width: 575px) {
     flex-flow: column;
   }
@@ -97,6 +93,7 @@ definePageMeta({ layout: false });
 
 .devjeff__code-editor {
   flex: 1;
+  min-width: 0;
 }
 
 .devjeff__contacts {

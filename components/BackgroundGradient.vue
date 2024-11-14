@@ -23,6 +23,5 @@ onMounted(() => {
   --gradient-color-1: #f1fd10;
   --gradient-color-2: #fdca10;
   --gradient-color-3: #fdde10;
-  --gradient-color-4: #fcb436;
 }
 </style>

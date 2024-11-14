@@ -99,7 +99,7 @@ const activeTab = computed(() => files[active.value])
 }
 
 .code-editor.ayu {
-  --editor-bg: rgba(11, 14, 20, 0.85);
+  --editor-bg: rgba(11, 14, 20, 0.92);
   --editor-fg: #eaeaea;
 
   --editor-tab-height: 46px;

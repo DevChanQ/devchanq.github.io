@@ -1,8 +1,17 @@
 <script setup lang="ts">
 const height = ref<number>(0);
 
-onMounted(() => {
+const onResize = () => {
   height.value = window.innerHeight;
+};
+
+onMounted(() => {
+  onResize();
+  window.addEventListener("resize", onResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", onResize);
 });
 
 useHead({
@@ -13,6 +22,11 @@ definePageMeta({ layout: false });
 
 <template>
   <div id="devjeff" :style="[height ? {height: `${height}px`} : {}]">
+    <div class="devjeff__bg">
+      <ClientOnly>
+        <BackgroundGradient />
+      </ClientOnly>
+    </div>
     <div class="devjeff__info">
       <div>
         <img height="56" src="@/assets/logo.png" />
@@ -38,6 +52,7 @@ definePageMeta({ layout: false });
 
 <style lang="scss">
 #devjeff {
+  position: relative;
   display: flex;
 
   width: 100%;
@@ -50,6 +65,15 @@ definePageMeta({ layout: false });
   @media screen and (max-width: 575px) {
     flex-flow: column;
   }
+}
+
+.devjeff__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .devjeff__info {

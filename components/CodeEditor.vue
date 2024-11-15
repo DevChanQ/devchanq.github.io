@@ -46,6 +46,7 @@ const openGithubReadmeTab = async (repo: string) => {
     ext: 'md',
     md: "Loading..."
   });
+  active.value = files.value.length - 1;
 
   let repoUrl = `https://raw.githubusercontent.com/${repo}/master`
   let res = await fetch(`${repoUrl}/README.md`)
@@ -62,7 +63,6 @@ const openGithubReadmeTab = async (repo: string) => {
   const replacedContent = content.replace(/(!\[.*\]\()(.+)(\))/g, `$1${repoUrl}/$2$3`).replace(/(<img.*?src=")\/(.*?")/g, `$1${repoUrl}/$2`);
 
   files.value[files.value.length - 1].md = replacedContent;
-  active.value = files.value.length - 1;
 }
 
 const onMarkdownClick = (e: PointerEvent) => {
@@ -242,6 +242,7 @@ const onMarkdownClick = (e: PointerEvent) => {
     width: 100%;
     position: relative;
     background: var(--editor-tabs-bg);
+    overflow: auto;
     
     &:after {
       content: "";
@@ -426,7 +427,7 @@ const onMarkdownClick = (e: PointerEvent) => {
 
     img {
       border-radius: 4px;
-      max-width: 500px !important;
+      max-width: 100%;
     }
 
     pre {
@@ -436,7 +437,8 @@ const onMarkdownClick = (e: PointerEvent) => {
     }
 
     p {
-      margin-bottom: 16px;
+      margin: 16px 0;
+      word-break: break-word;
     }
   }
 }

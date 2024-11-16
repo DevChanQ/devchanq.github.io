@@ -60,6 +60,7 @@ definePageMeta({ layout: false });
 
   @media screen and (max-width: 575px) {
     flex-flow: column;
+    height: 100% !important;
   }
 }
 

@@ -20,8 +20,9 @@ onMounted(() => {
   height: 100%;
   width: 100%;
 
-  --gradient-color-1: #f1fd10;
-  --gradient-color-2: #fdca10;
-  --gradient-color-3: #fdde10;
+  --gradient-color-1: #fdde10;
+  --gradient-color-2: #fdde10;
+  --gradient-color-3: #f0a10d;
+  // --gradient-color-4: #fdde10;
 }
 </style>

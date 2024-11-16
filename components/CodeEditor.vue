@@ -149,7 +149,7 @@ const onMarkdownClick = (e: PointerEvent) => {
 }
 
 .code-editor.ayu {
-  --editor-bg: rgba(11, 14, 20, 0.92);
+  --editor-bg: rgba(11, 14, 20, 0.82);
   --editor-fg: #eaeaea;
 
   --editor-tab-height: 46px;
@@ -439,6 +439,11 @@ const onMarkdownClick = (e: PointerEvent) => {
     p {
       margin: 16px 0;
       word-break: break-word;
+    }
+
+    blockquote {
+      padding-left: 12px;
+      border-left: 2px solid #fad711;
     }
   }
 }

@@ -60,12 +60,11 @@ definePageMeta({ layout: false });
 
   @media screen and (max-width: 575px) {
     flex-flow: column;
-    height: 100% !important;
   }
 }
 
 .devjeff__bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;

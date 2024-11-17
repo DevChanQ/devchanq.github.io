@@ -10,15 +10,7 @@ You can find me on [X](https://twitter.com/DevJeffHK) or contact me via <a href=
 
 *[Download my resume](/resume/resume.pdf)*
 
-## What I am learning.
-
-🤖 Machine Learning
-
-🤗 Hugging Face
-
-🧑‍💻 Rust
-
-## Recent projects.
+### I worked on...
 
 <img src="https://devjeff.info/github-logo.svg" width="20"> [react-native-svg-editor](https://github.com/DevChanQ/react-native-svg-editor) - The library that powers SVG Editor
 
@@ -31,3 +23,7 @@ You can find me on [X](https://twitter.com/DevJeffHK) or contact me via <a href=
 <img src="https://devjeff.info/images/svg-editor-logo.png" width="20"> [SVG Editor](https://thumbnaillab.app) - vector graphic designer app built with React Native
 
 [Amiibo concept page](https://devjeff.info/amiibo?name=ken) - Cool concept site with fun animations built with Vue.js & gsap
+
+### I am learning...
+
+Rust, Machine Learning & LLMs

@@ -149,7 +149,7 @@ const onMarkdownClick = (e: PointerEvent) => {
 }
 
 .code-editor.ayu {
-  --editor-bg: rgba(11, 14, 20, 0.82);
+  --editor-bg: rgba(11, 14, 20, 0.92);
   --editor-fg: #eaeaea;
 
   --editor-tab-height: 46px;
@@ -422,7 +422,11 @@ const onMarkdownClick = (e: PointerEvent) => {
     }
 
     h1, h2, h3 {
-      margin: 48px 0 24px;
+      margin: 48px 0 16px;
+    }
+
+    h3 {
+      font-size: 20px;
     }
 
     img {

@@ -1,0 +1,1 @@
+import{_ as o,v as s,a1 as a,a2 as c,t,a3 as r}from"./CCl-wZ4K.js";const n={},l={id:"empty-layout"};function p(e,d){return t(),s("div",l,[a(e.$slots,"default"),(t(),c(r("script"),{src:"https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs",type:"module"}))])}const i=o(n,[["render",p]]);export{i as default};

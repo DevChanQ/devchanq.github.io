@@ -441,7 +441,7 @@ const onMarkdownClick = (e: PointerEvent) => {
     }
 
     p {
-      margin: 16px 0;
+      margin: 12px 0;
       word-break: break-word;
     }
 

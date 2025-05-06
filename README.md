@@ -6,11 +6,15 @@ I make software that's fun, and cool.
 
 I specialises in frontend and backend development but feel free to contact me to discuss about anything.
 
+----------
+
 Contact me on [X](https://twitter.com/DevJeffHK) or via <a href="mailto:jeffrey@devjeff.info">mail</a>
 
 *[Download my resume](/resume/resume.pdf)*
 
 ### I worked on...
+
+[AO DevBot](https://devbot-preview_computerclub.ar.io) - AI powered coding assistant that helps you develop decentralised application on the AO Computer
 
 <img src="https://devjeff.info/github-logo.svg" width="20"> [react-native-svg-editor](https://github.com/DevChanQ/react-native-svg-editor) - The library that powers SVG Editor
 

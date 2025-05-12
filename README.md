@@ -12,9 +12,11 @@ Contact me on [X](https://twitter.com/DevJeffHK) or via <a href="mailto:jeffrey@
 
 *[Download my resume](/resume/resume.pdf)*
 
-### I worked on...
+### I am working/worked on...
 
-[AO DevBot](https://devbot-preview_computerclub.ar.io) - AI powered coding assistant that helps you develop decentralised application on the AO Computer
+[MyXSite](https://myxsite.ai) - Turn your profile into a website. Instantly.
+
+<img src="https://devjeff.info/aoComputer.svg" width="20"> [AO DevBot](https://devbot-preview_computerclub.ar.io) - AI powered coding assistant that helps you develop decentralised application on the AO Computer
 
 <img src="https://devjeff.info/github-logo.svg" width="20"> [react-native-svg-editor](https://github.com/DevChanQ/react-native-svg-editor) - The library that powers SVG Editor
 

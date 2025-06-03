@@ -2,9 +2,7 @@
 
 I am Jeffrey Chan. I am a software engineer who resides in Hong Kong.
 
-I make software that's fun, and cool.
-
-I specialises in frontend and backend development but feel free to contact me to discuss about anything.
+I make software that's fun for everyone and I am passionate about open source.
 
 ----------
 
@@ -12,7 +10,7 @@ Contact me on [X](https://twitter.com/DevJeffHK) or via <a href="mailto:jeffrey@
 
 *[Download my resume](/resume/resume.pdf)*
 
-### I am working/worked on...
+### I worked on 👨‍💻
 
 [MyXSite](https://myxsite.ai) - Turn your profile into a website. Instantly.
 
@@ -24,6 +22,6 @@ Contact me on [X](https://twitter.com/DevJeffHK) or via <a href="mailto:jeffrey@
 
 [See all projects](https://github.com/DevChanQ/my-projects)
 
-### I am learning...
+### I am learning 👨‍🏫
 
 Rust, Machine Learning & LLMs

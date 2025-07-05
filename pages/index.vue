@@ -1,4 +1,7 @@
 <script setup lang="ts">
+// TODO: add a simplistic UI version
+// TODO: github repo blog functionality
+
 const height = ref<number>(0);
 
 const onResize = () => {

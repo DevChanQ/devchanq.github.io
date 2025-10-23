@@ -1,22 +1,23 @@
 <script setup lang="ts">
+import type { ScrypeOptions } from 'scrype';
 const { $scrype } = useNuxtApp();
 
 const sidenavShown = ref<boolean>(false);
 const hideScrollIndicator = ref<boolean>(false);
 
 onMounted(() => {
-  let options = {
+  let options : ScrypeOptions = {
       pixelPerStep: 8,
-      position: 'top',
+      position: "top",
       codeContainerSelector:'#code-container',
       code: `class DevJeff {
-    constructor () {
+    constructor() {
       this.yob = 1996;
       this.from = 'Hong Kang ~~~~ong';
     }
-    about () {...}
-    projects () {...}
-    blog () {...}
+    about() {...}
+    projects() {...}
+    blog() {...}
   }
 > let developer = new DevJeff();`
     }
@@ -175,8 +176,6 @@ definePageMeta({
           <div class="col-md-5"></div>
         </div>
       </div>
-      
-      <devjeff-footer />
     </div>
   </div>
 </template>

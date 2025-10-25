@@ -1,28 +1,64 @@
 <script setup lang="ts">
 import type { ScrypeOptions } from 'scrype';
+import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
+import GithubButton from 'vue-github-button';
+
 const { $scrype } = useNuxtApp();
 
-const sidenavShown = ref<boolean>(false);
 const hideScrollIndicator = ref<boolean>(false);
+
+const code = `\
+import type { ScrypeOptions } from 'scrype';
+import Scrype from 'scrype';
+
+const code = \`some cool code\`;
+
+const options : ScrypeOptions = {
+  code,
+  lang: "typescript",
+  pixelPerStep: 8,
+  position: "top",
+  codeContainerSelector: "#code-container",
+};
+
+const scrype = new Scrype('#sticky', options);`;
 
 onMounted(() => {
   let options : ScrypeOptions = {
-      pixelPerStep: 8,
-      position: "top",
-      codeContainerSelector:'#code-container',
-      code: `class DevJeff {
-    constructor() {
-      this.yob = 1996;
-      this.from = 'Hong Kang ~~~~ong';
-    }
-    about() {...}
-    projects() {...}
-    blog() {...}
-  }
-> let developer = new DevJeff();`
-    }
+    lang: "typescript",
+    pixelPerStep: 8,
+    position: "top",
+    codeContainerSelector:'#code-container',
+    code
+  };
 
-    new $scrype('#sticky', options);
+  new $scrype('#sticky', options);
+})
+
+useHead({
+  title: 'Scrype - Present code snippet in an interesting way',
+  meta: [
+    {
+      name: 'description',
+      content: 'Scrype is a JavaScript library that helps you present code snippets in an interesting way by simulating typing effect.'
+    },
+    {
+      name: 'keywords',
+      content: 'scrype, code snippet, typing effect, javascript library, highlight.js, code presentation'
+    },
+    {
+      property: 'og:title',
+      content: 'Scrype - Present code snippet in an interesting way'
+    },
+    {
+      property: 'og:description',
+      content: 'Scrype is a JavaScript library that helps you present code snippets in an interesting way by simulating typing effect.'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    }
+  ]
 })
 
 definePageMeta({
@@ -31,11 +67,18 @@ definePageMeta({
 </script>
 
 <template>
-  <div id="devjeff__default-layout" class="light" :class="{'sidenav-shown': sidenavShown}">
+  <div id="devjeff__default-layout" class="light">
     <div id="devjeff__hero_layer" class="container">
       <div id="sticky">
         <div id="hero-container">
-          <devjeff-nav />
+          <div class="nav">
+            <div style="display: flex;flex-direction: column;gap: 16px;align-items: center;justify-content: center;">
+              <div class="scrype-logo"></div>
+              <ClientOnly>
+                <GithubButton href="https://github.com/DevChanQ/scrype" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star buttons/github-buttons on GitHub">Star</GithubButton>
+              </ClientOnly>
+            </div>
+          </div>
           <div id="hero-content">
             <div id="terminal" style="width: 100%;max-width: 500px;">
               <div class="window-bar">
@@ -49,9 +92,8 @@ definePageMeta({
               </div>
             </div>
           </div>
-          <div v-show="!hideScrollIndicator" style="display: flex;align-items: center;justify-content: center;padding-bottom: 120px;">
-            <!-- <div class="scroll-indicator"></div> -->
-            <dotlottie-player src="https://lottie.host/d193ccc9-ae40-4665-b539-8eebc7e42c5b/BckAHteOyq.json" background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></dotlottie-player>
+          <div style="display: flex;align-items: center;justify-content: center;padding-bottom: 120px;">
+            <DotLottieVue src="https://lottie.host/d193ccc9-ae40-4665-b539-8eebc7e42c5b/BckAHteOyq.json" style="width: 60px; height: 60px;" loop autoplay />
           </div>
           <!-- <div id="hero-content" class="container-fluid">
             <div class="row">
@@ -79,7 +121,8 @@ definePageMeta({
     </div>
     <div id="devjeff__back_layer">
       <div class="container px-4">
-        <div class="row no-gutters mb-5" id="about-me">
+        
+        <!-- <div class="row no-gutters mb-5" id="about-me">
           <div class="col-12">
             <h2 class="title">devjeff$ cat <span class="highlight">ABOUTME</span>.md</h2>
           </div>
@@ -174,12 +217,30 @@ definePageMeta({
             </div>
           </div>
           <div class="col-md-5"></div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
+  <!-- Place this tag in your head or just before your close body tag. -->
+  
 </template>
 
 <style lang="scss">
 @import "@/assets/styles/index.scss";
+@import "scrype/themes/github-dark.min.css";
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+
+  .scrype-logo {
+    width: 120px;
+    aspect-ratio: 41.2/8.2;
+    background-color: black;
+    mask: url("@/assets/scrype/logo.svg") no-repeat center;
+    mask-size: contain;
+  }
+}
 </style>

@@ -95,134 +95,22 @@ definePageMeta({
           <div style="display: flex;align-items: center;justify-content: center;padding-bottom: 120px;">
             <DotLottieVue src="https://lottie.host/d193ccc9-ae40-4665-b539-8eebc7e42c5b/BckAHteOyq.json" style="width: 60px; height: 60px;" loop autoplay />
           </div>
-          <!-- <div id="hero-content" class="container-fluid">
-            <div class="row">
-              <div class="col-12 col-lg-6 mb-5 mb-lg-0 text-left">
-                <h1 class="mb-4">A Programmer <br> who Strives for the Best</h1>
-                <a href="/#contact" class="devjeff__button">Get in touch</a>
-              </div>
-              <div class="col-12">
-                <div id="terminal" style="width: 100%;max-width: 500px;">
-                  <div style="height: 20px;">
-                    <div class="buttons">
-                      <div class="close"></div>
-                      <div class="minimize"></div>
-                      <div class="zoom"></div>
-                    </div>
-                  </div>
-                  <div id="code-container" class="code-snippet">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>
     <div id="devjeff__back_layer">
-      <div class="container px-4">
-        
-        <!-- <div class="row no-gutters mb-5" id="about-me">
-          <div class="col-12">
-            <h2 class="title">devjeff$ cat <span class="highlight">ABOUTME</span>.md</h2>
-          </div>
-          <div class="col-md-7 order-2 order-md-1 text-justify">
-            <p>I am Jeffrey Chan, a 27 years old independent software developer who resides in Hong Kong. Programming has always been my favourite hobby ever since I was 13. I always strive to become the best at what I do.</p>
-            <p>My skills includes: <span class="skills">html5 css javascript react-native nodejs electron vue django wagtail</span></p>
-            <p class="mb-0">I specialises in web frontend and backend development, as well as UI design but feel free to contact me to discuss about anything :)</p>
-          </div>
-          <div class="col-md-5 order-1 order-md-2">
-            <div class="mt-3 mb-5 mt-md-0 mb-md-0 mx-auto" style="max-width: 220px;">
-              <div
-                class="avatar"
-                style="background-image: url(https://avatars3.githubusercontent.com/u/45824907?s=460&v=4);">
-              </div>
-            </div>
-          </div>
+      <div class="container px-4" style="min-height: 300px;">
+        <div style="margin-top: 20px; display: flex; justify-content: center;">
+          <a href="https://github.com/DevChanQ/scrype" target="_blank" class="github-button">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            Check out on GitHub
+          </a>
         </div>
-        <div class="row no-gutters mb-5" id="projects">
-          <div class="col-12">
-            <h2 class="title">devjeff$ cat <span class="highlight">PROJECTS</span>.md</h2>
-            <div class="projects-container row gy-4 gy-sm-5">
-              <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                <a target="_blank" href="https://arweavehub.com/today">
-                  <div class="project">
-                    <div class="project-image" style="background-image: url('/images/arweave-today.jpeg')"></div>
-                    <h3>Arweave Today</h3>
-                    <p>A daily news platform dedicated to Arweave</p>
-                    <span>Arweave Site</span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                <a target="_blank" href="https://arweavehub.com">
-                  <div class="project">
-                    <div class="project-image" style="background-image: url('/images/arweave-hub.png')"></div>
-                    <h3>The Arweave Hub</h3>
-                    <p>Designed & developed the arweave hub - The place to find, create, and attend Arweave & Permaweb events.</p>
-                    <span>Arweave Site</span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                <a target="_blank" href="https://cookbook.arweave.dev">
-                  <div class="project">
-                    <div class="project-image" style="background-image: url('/images/permaweb-cookbook.png')"></div>
-                    <h3>Permaweb Cookbook 2.0</h3>
-                    <p>Redesigned & developed cookbook 2.0 for the Arweave community</p>
-                    <span>Arweave Community</span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                <a target="_blank" href="https://github.com/DevChanQ/react-native-svg-editor">
-                  <div class="project">
-                    <div class="project-image" style="background-image: url('/images/github.png')"></div>
-                    <h3>React Native SVG Editor</h3>
-                    <p>The core that powers SVG Editor & Memeish</p>
-                    <span>React Native Library</span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                <a target="_blank" href="https://thumbnaillab.app">
-                  <div class="project">
-                    <div class="project-image" style="background-image: url('/images/svg-editor.png')"></div>
-                    <h3>SVG Editor</h3>
-                    <p>View & Design Beautiful SVG</p>
-                    <span>iOS/Android Application</span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                <a target="_blank" href="/amiibo?name=ken">
-                  <div class="project">
-                    <div class="project-image" style="background-image: url('/images/amiibo.png')"></div>
-                    <h3>Amiibo Landing Page</h3>
-                    <p>A Nintendo Amiibo landing page concept made with Vue.js</p>
-                    <span>Concept Website</span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-xl-3">
-                <a target="_blank" href="https://github.com/DevChanQ/Scrype">
-                  <div class="project">
-                    <div class="project-image" style="background-image: url('/images/github.png')"></div>
-                    <h3>Scrype</h3>
-                    <p>Present code snippet in an interesting way</p>
-                    <span>Javascript Library</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-5"></div>
-        </div> -->
       </div>
     </div>
-  </div>
-  <!-- Place this tag in your head or just before your close body tag. -->
-  
+  </div>  
 </template>
 
 <style lang="scss">
@@ -241,6 +129,31 @@ definePageMeta({
     background-color: black;
     mask: url("@/assets/scrype/logo.svg") no-repeat center;
     mask-size: contain;
+  }
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #24292e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  
+  &:hover {
+    background-color: #2c3136;
+    color: white;
+    text-decoration: none;
+  }
+  
+  svg {
+    width: 16px;
+    height: 16px;
   }
 }
 </style>

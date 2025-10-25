@@ -3701,6 +3701,11 @@ hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
+highlight.js@^11.11.1:
+  version "11.11.1"
+  resolved "https://registry.npmjs.org/highlight.js/-/highlight.js-11.11.1.tgz"
+  integrity sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w==
+
 hookable@^5.5.3:
   version "5.5.3"
   resolved "https://registry.npmjs.org/hookable/-/hookable-5.5.3.tgz"
@@ -5794,9 +5799,10 @@ schema-utils@^4.3.3:
     ajv-formats "^2.1.1"
     ajv-keywords "^5.1.0"
 
-scrype@1.1.0:
-  version "1.1.0"
-  resolved "file:../scrype"
+scrype@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/scrype/-/scrype-1.2.1.tgz"
+  integrity sha512-kvILBHDI59TfcAJX1ZR+M0DF97qQ4LB1XSd+exMcAlYc+xSAFDE4GHZfMnQMIR6fjIKtUVMFmse9IG2qkIsPzQ==
   dependencies:
     highlight.js "^11.11.1"
 

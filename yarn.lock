@@ -485,18 +485,6 @@
   resolved "https://registry.npmjs.org/@kwsites/promise-deferred/-/promise-deferred-1.1.1.tgz"
   integrity sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==
 
-"@lottiefiles/dotlottie-vue@^0.10.5":
-  version "0.10.5"
-  resolved "https://registry.npmjs.org/@lottiefiles/dotlottie-vue/-/dotlottie-vue-0.10.5.tgz"
-  integrity sha512-Dpzwf9Zx34srxjx7270BhLKnuoSmKKgcWM+LMcBhjSuBzzcPJXxUu8v1yyo969LKWYOrapw742mb2D/3Xh6pOw==
-  dependencies:
-    "@lottiefiles/dotlottie-web" "0.54.1"
-
-"@lottiefiles/dotlottie-web@0.54.1":
-  version "0.54.1"
-  resolved "https://registry.npmjs.org/@lottiefiles/dotlottie-web/-/dotlottie-web-0.54.1.tgz"
-  integrity sha512-Xq6wKvQ1hJUAalctrrVSZNIPStJBEAzSsQl4rtinPEfl6LBZdos0GGfVLdyGjZZYODzoG28SMN09YKAC9Kz6RQ==
-
 "@mapbox/node-pre-gyp@^1.0.5":
   version "1.0.11"
   resolved "https://registry.npmjs.org/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.11.tgz"
@@ -3701,6 +3689,11 @@ hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
+highlight.js@^11.11.1:
+  version "11.11.1"
+  resolved "https://registry.npmjs.org/highlight.js/-/highlight.js-11.11.1.tgz"
+  integrity sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w==
+
 hookable@^5.5.3:
   version "5.5.3"
   resolved "https://registry.npmjs.org/hookable/-/hookable-5.5.3.tgz"
@@ -5794,9 +5787,10 @@ schema-utils@^4.3.3:
     ajv-formats "^2.1.1"
     ajv-keywords "^5.1.0"
 
-"scrype@file:../scrype":
-  version "1.2.1"
-  resolved "file:../scrype"
+scrype@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/scrype/-/scrype-1.2.2.tgz"
+  integrity sha512-iJF/r/OGT/m+WMInROBVXy6TSHLM+3TD1FcmNrh1GA7KJZd/9HPkO5Tl169IjxAmZjLjqSldHLYzKlcwY3KtMw==
   dependencies:
     highlight.js "^11.11.1"
 

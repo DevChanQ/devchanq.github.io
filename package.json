@@ -12,7 +12,6 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@lottiefiles/dotlottie-vue": "^0.10.5",
     "bootstrap": "^5.3.2",
     "core-js": "^3.19.3",
     "gsap": "^3.6.1",

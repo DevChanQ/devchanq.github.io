@@ -1,17 +1,14 @@
 <script setup lang="ts">
 import type { ScrypeOptions } from 'scrype';
-import { DotLottieVue } from '@lottiefiles/dotlottie-vue';
 import GithubButton from 'vue-github-button';
 
-const { $scrype } = useNuxtApp();
-
-const hideScrollIndicator = ref<boolean>(false);
+const { $Scrype } = useNuxtApp();
 
 const code = `\
 import type { ScrypeOptions } from 'scrype';
 import Scrype from 'scrype';
 
-const code = \`some cool code\`;
+const code = \`some cool code here!\`;
 
 const options : ScrypeOptions = {
   code,
@@ -23,16 +20,16 @@ const options : ScrypeOptions = {
 
 const scrype = new Scrype('#sticky', options);`;
 
-onMounted(() => {
-  let options : ScrypeOptions = {
-    lang: "typescript",
-    pixelPerStep: 8,
-    position: "top",
-    codeContainerSelector:'#code-container',
-    code
-  };
+const options : ScrypeOptions = {
+  code,
+  lang: "typescript",
+  pixelPerStep: 20,
+  position: "top",
+  codeContainerSelector:'#code-container',
+};
 
-  new $scrype('#sticky', options);
+onMounted(() => {
+  new $Scrype('#sticky', options);
 })
 
 useHead({
@@ -93,7 +90,7 @@ definePageMeta({
             </div>
           </div>
           <div style="display: flex;align-items: center;justify-content: center;padding-bottom: 120px;">
-            <DotLottieVue src="https://lottie.host/d193ccc9-ae40-4665-b539-8eebc7e42c5b/BckAHteOyq.json" style="width: 60px; height: 60px;" loop autoplay />
+            <iframe width="60" height="60" src="https://lottie.host/embed/8f8d02f0-068d-44a9-bb04-ac192efcc2dd/AR7UYL3MfA.lottie"></iframe>
           </div>
         </div>
       </div>

@@ -14,6 +14,8 @@ Contact me on [X](https://twitter.com/DevJeffHK) or via <a href="mailto:jeffrey@
 
 <img src="https://devjeff.info/aoComputer.svg" width="20"> [AO DevBot](https://aodevbot.ai) - AI powered coding assistant that helps you develop decentralised application on the AO Computer
 
+<img src="https://devjeff.info/github-logo.svg" width="20"> [Scrype](https://devjeff.info/scrype) - Present code snippets in an interesting way
+
 [MyXSite](https://myxsite.ai) - Turn your profile into a website. Instantly.
 
 <img src="https://devjeff.info/github-logo.svg" width="20"> [react-native-svg-editor](https://github.com/DevChanQ/react-native-svg-editor) - The library that powers SVG Editor

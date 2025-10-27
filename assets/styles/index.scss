@@ -68,7 +68,7 @@
 
 // code snipet container
 
-#terminal {
+.terminal {
   overflow: hidden;
   // background-image: url('../assets/untitled.png');
   box-shadow: 0 14px 66px rgba(0, 0, 0, 0.07), 0 10px 17px rgba(0, 0, 0, 0.03), 0 4px 7px rgba(0, 0, 0, 0.05);
@@ -76,14 +76,16 @@
   // background: linear-gradient(330deg, #daf8f6 0%, #ffffff 90%);
   // background: linear-gradient(316deg, #f1bf0b 0%, #fdde10 80%);
   // background: linear-gradient(316deg, #232323 0%, #3d3d3d 80%);
-  background: #3d3d3d;
+  background: #0d1117;
+  border: 1px solid #3d444d;
   border-radius: 10px;
   backdrop-filter: blur(8px);
 
   .window-bar {
     border-radius: 10px 10px 0 0;
     height: 26px;
-    background: rgba(10, 10, 10, 0.38);
+    background: #151b23;
+    border-bottom: 1px solid #3d444d;
   }
 
   .buttons {

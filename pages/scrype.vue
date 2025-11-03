@@ -31,8 +31,15 @@ const options : ScrypeOptions = {
 
 const scrype = new Scrype('#sticky', options);`;
 
+const progress = ref(0);
+const terminalScale = computed(() => Math.min(0.95 + (progress.value * 0.3), 1.25));
+const codeGlow = computed(() => Math.sin(progress.value * Math.PI) * 20)
+
 const options : ScrypeOptions = {
   code,
+  onProgress: (p) => {
+    progress.value = p;
+  },
   lang: "typescript",
   pixelPerStep: 25,
   position: "top",
@@ -88,7 +95,9 @@ useHead({
       <div id="sticky">
         <div id="hero-container">
           <div class="nav">
-            <div style="display: flex;flex-direction: column;gap: 16px;align-items: center;justify-content: center;">
+            <div
+              style="display: flex;flex-direction: column;gap: 16px;align-items: center;justify-content: center;"
+              :style="{ transform: `translateY(${-progress * 20}px)`, opacity: 1 - progress * 0.3 }">
               <div class="scrype-logo"></div>
               <ClientOnly>
                 <GithubButton href="https://github.com/DevChanQ/scrype" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star buttons/github-buttons on GitHub">Star</GithubButton>
@@ -96,7 +105,12 @@ useHead({
             </div>
           </div>
           <div id="hero-content">
-            <div class="terminal" style="width: 100%;max-width: 600px;">
+            <div
+              class="terminal"
+              style="width: 100%;max-width: 600px;"
+              :style="{
+                filter: `drop-shadow(0 0 ${codeGlow}px rgba(255, 203, 13, 0.5))`
+              }">
               <div class="window-bar">
                 <div class="buttons">
                   <div class="close"></div>
@@ -108,7 +122,7 @@ useHead({
               </div>
             </div>
           </div>
-          <div style="margin-top: 32px;display: flex;align-items: center;justify-content: center;padding-bottom: 120px;">
+          <div :style="{ transform: `translateY(${progress * 20}px)`, opacity: 1 - progress * 0.3 }" style="margin-top: 32px;display: flex;align-items: center;justify-content: center;padding-bottom: 120px;">
             <iframe width="60" height="60" src="https://lottie.host/embed/8f8d02f0-068d-44a9-bb04-ac192efcc2dd/AR7UYL3MfA.lottie"></iframe>
           </div>
         </div>

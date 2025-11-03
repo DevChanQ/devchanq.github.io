@@ -5787,10 +5787,10 @@ schema-utils@^4.3.3:
     ajv-formats "^2.1.1"
     ajv-keywords "^5.1.0"
 
-scrype@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.npmjs.org/scrype/-/scrype-1.2.2.tgz"
-  integrity sha512-iJF/r/OGT/m+WMInROBVXy6TSHLM+3TD1FcmNrh1GA7KJZd/9HPkO5Tl169IjxAmZjLjqSldHLYzKlcwY3KtMw==
+scrype@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.npmjs.org/scrype/-/scrype-1.2.3.tgz"
+  integrity sha512-FavPvf92ooh/ATq7F59pokVi3BTmhVNbNDnmmKFvUJVv7cxN4RZnZ1JR5mLMAQkHVGUJEUUV8+WJVhJsLSB/XA==
   dependencies:
     highlight.js "^11.11.1"
 

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrype Browser Demo</title>
+    
+    <!-- Scrype theme CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/scrype/dist/themes/github-dark.min.css">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+        }
+
+        #sticky {
+            position: sticky;
+            top: 0;
+            min-height: 100vh;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        #code-container {
+            background: #161b22;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .spacer {
+            height: 100vh;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: #58a6ff;
+            transition: width 0.1s ease;
+            z-index: 1000;
+        }
+
+        .info {
+            text-align: center;
+            padding: 0 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .info h1 {
+            margin: 0 0 1rem 0;
+            font-size: 2.5rem;
+        }
+
+        .info p {
+            color: #8b949e;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progress"></div>
+
+    <div id="sticky">
+      <div class="info">
+          <h1>Scrype Browser Demo</h1>
+          <p>Scroll down to see the code animation</p>
+      </div>
+      <div id="code-container"></div>
+    </div>
+
+    <!-- Scrype Browser IIFE Bundle -->
+    <script src="https://unpkg.com/scrype/dist/scrype.browser.js"></script>
+    
+    <script>
+        // The IIFE build exposes Scrype as a global variable
+        const code = `import Scrype from 'scrype';
+import type { ScrypeOptions } from 'scrype';
+
+const code = \`const greeting = "Hello, World!";
+console.log(greeting);
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(n => n * 2);\`;
+
+const options: ScrypeOptions = {
+  code,
+  lang: "typescript",
+  pixelPerStep: 8,
+  position: "top",
+  codeContainerSelector: "#code-container",
+  onProgress: (progress) => {
+    console.log(\`Progress: \${progress}%\`);
+  }
+};
+
+const scrype = new Scrype('#sticky', options);`;
+
+        const options = {
+            code: code,
+            lang: "typescript",
+            pixelPerStep: 8,
+            position: "center",
+            codeContainerSelector: "#code-container",
+            onProgress: function(progress) {
+                const progressBar = document.getElementById('progress');
+                if (progressBar) {
+                    progressBar.style.width = progress + '%';
+                }
+            }
+        };
+
+        // Initialize Scrype using the global Scrype object
+        new QuickWallet('#sticky', options);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+import{_ as m}from"./CgvDDjEu.js";import{_ as g}from"./j0p6Pf9q.js";import{i as h,D as v,A as r,E as b,G as S,H as w,z as x,k as C,s as $,o as k,c as j,a as t,b as c,w as p,n as l,q as o,d as s,C as P}from"./CjahKu6V.js";import{u as z}from"./C5sM4XJS.js";const A=h({name:"github-button",props:{href:String,ariaLabel:String,title:String,dataIcon:String,dataColorScheme:String,dataSize:String,dataShowCount:String,dataText:String},render:function(){const e={ref:"_"};for(const n in this.$props)e[v(n)]=this.$props[n];return r("span",[b(this.$slots,"default")?r("a",e,this.$slots.default()):r("a",e)])},mounted:function(){this.paint()},beforeUpdate:function(){this.reset()},updated:function(){this.paint()},beforeUnmount:function(){this.reset()},methods:{paint:function(){if(this.$el.lastChild!==this.$refs._)return;const e=this.$el.appendChild(document.createElement("span")),n=this;S(()=>import("./DK2fWHEW.js"),[],import.meta.url).then(function(a){n.$el.lastChild===e&&a.render(e.appendChild(n.$refs._),function(i){n.$el.lastChild===e&&e.parentNode.replaceChild(i,e)})})},reset:function(){this.$refs._!=null&&this.$el.replaceChild(this.$refs._,this.$el.lastChild)}}}),N={id:"devjeff__default-layout",class:"light"},M={id:"devjeff__hero_layer",class:"container"},O={id:"sticky"},B={id:"hero-container"},D={class:"nav"},E={style:{display:"flex","flex-direction":"column",gap:"16px","align-items":"center","justify-content":"center"}},G=t("div",{class:"scrype-logo"},null,-1),V={id:"hero-content"},H=P('<div class="window-bar"><div class="buttons"><div class="close"></div><div class="minimize"></div><div class="zoom"></div></div></div><div id="code-container" class="code-snippet"></div>',2),L=[H],I=t("iframe",{width:"70",height:"70",src:"https://lottie.host/embed/8f8d02f0-068d-44a9-bb04-ac192efcc2dd/AR7UYL3MfA.lottie"},null,-1),T=[I],U={class:"scrype__footer"},J=t("div",{style:{"margin-top":"20px",display:"flex","justify-content":"center"}},[t("a",{href:"https://github.com/DevChanQ/scrype",target:"_blank",class:"github-button"},[t("svg",{width:"16",height:"16",viewBox:"0 0 16 16",fill:"currentColor"},[t("path",{d:"M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"})]),s(" Check out on GitHub ")])],-1),K=h({__name:"scrype",setup(e){const{$Scrype:n}=w(),a=`import type { ScrypeOptions } from 'scrype';
+import Scrype from 'scrype';
+
+const logo = \`
+░░░█▀▀░█▀▀░█▀▄░▀█▀░█▀█░█▀▀░░
+░░░▀▀█░█░░░█▀▄░░█░░█▀▀░█▀▀░░
+░░░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀░░░▀▀▀░░
+\`
+
+const options : ScrypeOptions = {
+// wait.... the logo is wrong!          
+${"~".repeat(150)}█░█░█▀█░█▀▀░░
+░░░▀▀█░█░░░█▀▄░░█░░█▀▀░█▀▀░░
+░░░▀▀▀░▀▀▀░▀░▀░░▀░░▀░░░▀▀▀░░
+\`;
+
+const options : ScrypeOptions = {
+  code: logo,
+  lang: "typescript",
+  pixelPerStep: 8,
+  position: "top",
+  codeContainerSelector: "#code-container",
+};
+
+const scrype = new Scrype('#sticky', options);`,i=x(0),u=C(()=>Math.sin(i.value*Math.PI)*20),_={code:a,onProgress:d=>{i.value=d},lang:"typescript",pixelPerStep:25,position:"top",codeContainerSelector:"#code-container"};return $(()=>{new n("#sticky",_)}),z({title:"Scrype - Present code snippet in an interesting way",meta:[{name:"description",content:"Scrype is a JavaScript library that helps you present code snippets in an interesting way by simulating typing effect."},{name:"keywords",content:"scrype, code snippet, typing effect, javascript library, highlight.js, code presentation"},{property:"og:title",content:"Scrype - Present code snippet in an interesting way"},{property:"og:description",content:"Scrype is a JavaScript library that helps you present code snippets in an interesting way by simulating typing effect."},{property:"og:type",content:"website"}],bodyAttrs:{style:{background:"#ffcb0d"}}}),(d,Q)=>{const f=m,y=g;return k(),j("div",N,[t("div",M,[t("div",O,[t("div",B,[t("div",D,[t("div",E,[G,c(f,null,{default:p(()=>[c(o(A),{href:"https://github.com/DevChanQ/scrype","data-color-scheme":"no-preference: light; light: light; dark: dark;","data-icon":"octicon-star","data-size":"large","data-show-count":"true","aria-label":"Star buttons/github-buttons on GitHub"},{default:p(()=>[s("Star")]),_:1})]),_:1})])]),t("div",V,[t("div",{class:"terminal",style:l([{width:"100%","max-width":"600px"},{filter:`drop-shadow(0 0 ${o(u)}px rgba(255, 203, 13, 0.5))`}])},L,4)]),t("div",{style:l([{transform:`translateY(${-o(i)*20}px)`,opacity:1-o(i)*.3},{"margin-top":"32px",display:"flex","align-items":"center","justify-content":"center","padding-bottom":"120px"}])},T,4)])])]),t("div",U,[J,t("p",null,[s("Made with ❤️ by "),c(y,{to:"/"},{default:p(()=>[s("Devjeff")]),_:1})])])])}}});export{K as default};

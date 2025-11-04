@@ -1,0 +1,1 @@
+import{_ as t,c as o,a4 as s,o as c}from"./CjahKu6V.js";const r={},a={id:"empty-layout"};function n(e,_){return c(),o("div",a,[s(e.$slots,"default")])}const l=t(r,[["render",n]]);export{l as default};

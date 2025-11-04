@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { ScrypeOptions } from 'scrype';
 import GithubButton from 'vue-github-button';
+import { markdown as installation } from '@/assets/scrype/installation.md';
 
 const { $Scrype } = useNuxtApp();
 
@@ -32,7 +33,6 @@ const options : ScrypeOptions = {
 const scrype = new Scrype('#sticky', options);`;
 
 const progress = ref(0);
-const terminalScale = computed(() => Math.min(0.95 + (progress.value * 0.3), 1.25));
 const codeGlow = computed(() => Math.sin(progress.value * Math.PI) * 20)
 
 const options : ScrypeOptions = {
@@ -46,8 +46,21 @@ const options : ScrypeOptions = {
   codeContainerSelector:'#code-container',
 };
 
+// const browserOptions : ScrypeOptions = {
+//   code: installation,
+//   lang: "html",
+//   pixelPerStep: 25,
+//   position: "center",
+//   codeContainerSelector:'#browser-code-container',
+// };
+
 onMounted(() => {
   new $Scrype('#sticky', options);
+  // new $Scrype('#browser-sticky', browserOptions);
+})
+
+definePageMeta({
+  layout: "empty"
 })
 
 useHead({
@@ -73,14 +86,7 @@ useHead({
       property: 'og:type',
       content: 'website'
     }
-  ]
-})
-
-definePageMeta({
-  layout: "empty"
-})
-
-useHead({
+  ],
   bodyAttrs: {
     style: {
       'background': '#ffcb0d'
@@ -96,8 +102,7 @@ useHead({
         <div id="hero-container">
           <div class="nav">
             <div
-              style="display: flex;flex-direction: column;gap: 16px;align-items: center;justify-content: center;"
-              :style="{ transform: `translateY(${-progress * 20}px)`, opacity: 1 - progress * 0.3 }">
+              style="display: flex;flex-direction: column;gap: 16px;align-items: center;justify-content: center;">
               <div class="scrype-logo"></div>
               <ClientOnly>
                 <GithubButton href="https://github.com/DevChanQ/scrype" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star buttons/github-buttons on GitHub">Star</GithubButton>
@@ -122,11 +127,28 @@ useHead({
               </div>
             </div>
           </div>
-          <div :style="{ transform: `translateY(${progress * 20}px)`, opacity: 1 - progress * 0.3 }" style="margin-top: 32px;display: flex;align-items: center;justify-content: center;padding-bottom: 120px;">
-            <iframe width="60" height="60" src="https://lottie.host/embed/8f8d02f0-068d-44a9-bb04-ac192efcc2dd/AR7UYL3MfA.lottie"></iframe>
+          <div :style="{ transform: `translateY(${-progress * 20}px)`, opacity: 1 - progress * 0.3 }" style="margin-top: 32px;display: flex;align-items: center;justify-content: center;padding-bottom: 120px;">
+            <iframe width="70" height="70" src="https://lottie.host/embed/8f8d02f0-068d-44a9-bb04-ac192efcc2dd/AR7UYL3MfA.lottie"></iframe>
           </div>
         </div>
       </div>
+
+      <!-- Browser Installation -->
+      <!-- <div id="browser-sticky">
+        <div class="installation-section">
+          <h2>Browser</h2>
+          <div class="terminal" style="width: 100%;max-width: 800px;">
+            <div class="window-bar">
+              <div class="buttons">
+                <div class="close"></div>
+                <div class="minimize"></div>
+                <div class="zoom"></div>
+              </div>
+            </div>
+            <div id="browser-code-container" class="code-snippet"></div>
+          </div>
+        </div>
+      </div> -->
     </div>
     <div class="scrype__footer">
       <div style="margin-top: 20px; display: flex; justify-content: center;">
@@ -177,25 +199,34 @@ useHead({
 .github-button {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  background-color: #24292e;
+  gap: 12px;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #24292e 0%, #1a1f23 100%);
   color: white;
   text-decoration: none;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  transition: background-color 0.2s ease;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   
   &:hover {
-    background-color: #2c3136;
+    background: linear-gradient(135deg, #2c3136 0%, #24292e 100%);
     color: white;
     text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
   
   svg {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
 }
 </style>

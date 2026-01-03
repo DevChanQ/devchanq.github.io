@@ -27,7 +27,7 @@ definePageMeta({ layout: false });
   <div id="devjeff" :style="[height ? {height: `${height}px`} : {}]">
     <div class="devjeff__bg">
       <ClientOnly>
-        <BackgroundGradient />
+        <GradientBackground />
       </ClientOnly>
     </div>
     <div class="devjeff__info">

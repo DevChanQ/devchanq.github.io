@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { ScrypeOptions } from 'scrype';
 import GithubButton from 'vue-github-button';
-import { markdown as installation } from '@/assets/scrype/installation.md';
 
 const { $Scrype } = useNuxtApp();
 

@@ -10,8 +10,8 @@
 // github gist
 // https://gist.github.com/jordienr/64bcf75f8b08641f205bd6a1a0d4ce1d
 
-import gradientVertexShader from './shaders/gradient-vertex.glsl?raw';
-import gradientFragmentShader from './shaders/gradient-fragment.glsl?raw';
+// import gradientVertexShader from './shaders/gradient-vertex.glsl?raw';
+// import gradientFragmentShader from './shaders/gradient-fragment.glsl?raw';
 
 //Converting colors to proper format
 function normalizeColor(hexCode) {

@@ -6,13 +6,9 @@ I make software that's fun for everyone and I am passionate about open source.
 
 ----------
 
-Contact me on [X](https://twitter.com/DevJeffHK) or via <a href="mailto:jeffrey@devjeff.info">mail</a>
-
-*[Download my resume](/resume/resume.pdf)*
+Contact: [Github](https://github.com/DevChanQ), [LinkedIn](https://www.linkedin.com/in/jeffrey-ching-kiu-chan/), [X/Twitter](https://twitter.com/DevJeffHK), <a href="mailto:jeffrey@devjeff.info">Email</a>
 
 ### I worked on 👨‍💻
-
-<img src="https://devjeff.info/aoComputer.svg" width="20"> [AO DevBot](https://aodevbot.ai) - AI powered coding assistant that helps you develop decentralised application on the AO Computer
 
 <img src="https://devjeff.info/github-logo.svg" width="20"> [Scrype](https://devjeff.info/scrype) - Present code snippets in an interesting way
 
@@ -21,6 +17,8 @@ Contact me on [X](https://twitter.com/DevJeffHK) or via <a href="mailto:jeffrey@
 <img src="https://devjeff.info/github-logo.svg" width="20"> [react-native-svg-editor](https://github.com/DevChanQ/react-native-svg-editor) - The library that powers SVG Editor
 
 <img src="https://devjeff.info/github-logo.svg" width="20"> [Pikabu tweak](https://github.com/DevChanQ/pikabu) - Volume Hud tweak for jailbroken iOS devices
+
+<img src="https://devjeff.info/arweave.svg" width="20" alt="Arweave logo"> [Arweave Fullstack Hack](https://community.arweave.net/#/fullstack) — Hackathon landing page & signup backend
 
 [See all projects](https://github.com/DevChanQ/my-projects)
 
